@@ -1,19 +1,16 @@
 ﻿
 /*crouseles*/
+/*Carga el efecto carousel al iniciar el sitio*/
 $(document).ready(function () {
-    alert("ey");
     $('#carousel1').carousel({
         interval: 3999
     });
-
-
     $('#carousel2').carousel({
         interval: 4000
     });
 });
 
 /* Js Facebook*/
-
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -31,6 +28,16 @@ _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
-
-
-
+/*script img hover optimizado*/
+$(function () {
+    $('.cliente li img').mouseover(function () {
+        tag = $(this).attr("id");
+        var src = "img/fhl/" + tag + ".jpg";
+        $(this).attr("src", src);
+    })
+        .mouseout(function () {
+            var src = $(this).attr("src").replace("img/fhl/" + tag + ".jpg", "img/fhl/" + tag + "n.jpg");
+            $(this).attr("src", src);
+        
+     });
+});
