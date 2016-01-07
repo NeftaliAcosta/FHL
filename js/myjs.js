@@ -1,7 +1,18 @@
 ﻿
-/*crouseles*/
-/*Carga el efecto carousel al iniciar el sitio*/
+
 $(document).ready(function () {
+
+    /*Deteccion de país*/
+    //$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
+    //    alert('País: ' + data.address.country + ' Código:' + data.address.country_code);
+    //});
+
+
+
+    
+
+    /*crouseles*/
+    /*Carga el efecto carousel al iniciar el sitio*/
     $('#carousel1').carousel({
         interval: 3999
     });
