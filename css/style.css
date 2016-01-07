@@ -1597,7 +1597,9 @@ form {
 #top_menu .dropdown-menu > li > a {
 	padding:6px 20px;
 }
-
+/*#####################
+Estilo adicional  personalizado
+######################*/
 .txtpersonal{
     text-align:justify;
 }
@@ -1616,7 +1618,12 @@ form {
 .modal-backdrop {
    background-color: #FFF!important;
    opacity: 0.5!important;
-}    
+}   
+
+.mflags{
+   background-color: #FFF!important;
+   opacity: 1!important;
+}  
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
@@ -1653,3 +1660,4 @@ right: 10px;
 .carousel-control.left {
  right: 40px;
 }
+/*######################*/

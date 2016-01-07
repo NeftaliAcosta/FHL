@@ -6,10 +6,53 @@ $(document).ready(function () {
     //$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
     //    alert('País: ' + data.address.country + ' Código:' + data.address.country_code);
     //});
+    /*=============================================*/
 
+    function $_GET(param) {
+        /* Obtener la url completa */
+        url = document.URL;
+        /* Buscar a partir del signo de interrogación ? */
+        url = String(url.match(/\?+.+/));
+        /* limpiar la cadena quitándole el signo ? */
+        url = url.replace("?", "");
+        /* Crear un array con parametro=valor */
+        url = url.split("&");
 
+        /* 
+        Recorrer el array url
+        obtener el valor y dividirlo en dos partes a través del signo = 
+        0 = parametro
+        1 = valor
+        Si el parámetro existe devolver su valor
+        */
+        x = 0;
+        while (x < url.length) {
+            p = url[x].split("=");
+            if (p[0] == param) {
+                return decodeURIComponent(p[1]);
+            }
+            x++;
+        }
+    }
 
     
+    if (($_GET("flags")==0)){
+        /*No invoco el modal de las banderas*/
+    }
+    else {
+        /*Invoco el modal de cumplirse la condición*/
+        $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
+    }
+
+
+    /*=============================================*/
+    /*Asignar URL a Bandera de modal*/
+    $('.mflags a').mouseover(function () {
+        param = '?flags=0'
+        country = $(this).attr("id");
+        $("a").prop("href", country + param)
+    })
+    /*=============================================*/
 
     /*crouseles*/
     /*Carga el efecto carousel al iniciar el sitio*/
@@ -19,6 +62,7 @@ $(document).ready(function () {
     $('#carousel2').carousel({
         interval: 4000
     });
+    /*=============================================*/
 });
 
 /* Js Facebook*/
@@ -52,3 +96,4 @@ $(function () {
         
      });
 });
+
