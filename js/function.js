@@ -176,8 +176,8 @@ function map(){
 }
 
 function map_initialize() {
-    var myLatlngCenter = new google.maps.LatLng(19.3474432, -99.1816424,17.8);
-    var myMarker = new google.maps.LatLng(19.3474432, -99.1816424,17.8);
+    var myLatlngCenter = new google.maps.LatLng(19.3491009, -99.1865865, 17.8);
+    var myMarker = new google.maps.LatLng(19.3491009, -99.1865865, 17.8);
 
 
     var mapEl = document.getElementById('map');
