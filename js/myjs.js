@@ -36,14 +36,13 @@ $(document).ready(function () {
     }
 
     
-    if (($_GET("flags")==0)){
-        /*No invoco el modal de las banderas*/
-    }
-    else {
-        /*Invoco el modal de cumplirse la condición*/
-        $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
-    }
-
+    //if (($_GET("flags") == 0)) {
+    //    /*No invoco el modal de las banderas*/
+    //}
+    //else {
+    //    /*Invoco el modal de cumplirse la condición*/
+    //    $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
+    //}
 
     /*=============================================*/
     /*Asignar URL a Bandera de modal*/
@@ -53,7 +52,7 @@ $(document).ready(function () {
         $("a").prop("href", country + param)
     })
     /*=============================================*/
-
+ 
     /*crouseles*/
     /*Carga el efecto carousel al iniciar el sitio*/
     $('#carousel1').carousel({
