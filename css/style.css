@@ -548,6 +548,7 @@ ul, ol {
 
 .photo:hover .img > i {
     /*==========================================================================*/
+    /*position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -556,7 +557,7 @@ ul, ol {
     opacity:0.7;
     filter:alpha(opacity=70);
     content:'';
-    z-index:1;
+    z-index:1;*/
 }	
 .photo:hover .img:after {
     position:absolute;
@@ -1611,13 +1612,13 @@ Estilo adicional  personalizado
     color: #003f6e;
 }
 .txtmodal{
-    text-align:justify;
+    text-align:justify!important;
     margin: 10px;
     
 }
 .modal-backdrop {
-   background-color: #FFF!important;
-   opacity: 0.5!important;
+   background-color: #959595!important;
+   opacity: 0.8!important;
 }   
 
 .mflags{
@@ -1625,9 +1626,25 @@ Estilo adicional  personalizado
    opacity: 1!important;
 }  
 
+<<<<<<< HEAD
 
 
 
+=======
+.txtpais{
+    padding-top: -10px;
+}
+.myp{
+    margin-top: -2em;
+    /* background-color: #000; */
+    text-align: center;
+    color: #000;
+}
+
+li spanl .desc{
+    height:120px;
+}
+>>>>>>> refs/remotes/origin/V1
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
