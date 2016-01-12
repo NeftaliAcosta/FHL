@@ -284,7 +284,7 @@ ul, ol {
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
-    background: #000000;
+    background: #CF0A2C !important;
     line-height: 50px;
     padding: 0 12px;
 }
@@ -309,7 +309,7 @@ ul, ol {
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
-    background: #000000;
+    background: #CF0A2C !important;
     line-height: 50px;
     padding: 0 12px;
 }
@@ -1627,7 +1627,10 @@ Estilo adicional  personalizado
 }  
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> refs/remotes/origin/V1
 
 
 =======
@@ -1641,6 +1644,20 @@ Estilo adicional  personalizado
     color: #000;
 }
 
+<<<<<<< HEAD
+=======
+.txtpais{
+    padding-top: -10px;
+}
+.myp{
+    margin-top: -2em;
+    /* background-color: #000; */
+    text-align: center;
+    color: #000;
+}
+
+=======
+>>>>>>> refs/remotes/origin/V1
 li spanl .desc{
     height:120px;
 }

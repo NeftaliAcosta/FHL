@@ -1,7 +1,8 @@
 ﻿
 
 $(document).ready(function () {
-
+   
+  
     /*Deteccion de país*/
     //$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
     //    alert('País: ' + data.address.country + ' Código:' + data.address.country_code);
@@ -35,14 +36,25 @@ $(document).ready(function () {
         }
     }
 
+    /*=============================================*/
+    /*Obtener banderas por dominio*/
+    $(location).attr('href');
+    var pathname = window.location.pathname;
+    var localhost = 'http://localhost:52409/'
+    var mx = 'http://www.efh.mx/'
+    var corp = 'http://efhcorporativo.com/'
+    //if ((localhost == window.location) || (mx == window.location) || (corp==windows.location)) {
+    //    /*Invoco el modal siempre que se acceda a un dominio*/
+    //    $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' })
+    //}
     
-    //if (($_GET("flags") == 0)) {
-    //    /*No invoco el modal de las banderas*/
-    //}
-    //else {
-    //    /*Invoco el modal de cumplirse la condición*/
-    //    $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
-    //}
+    
+    if (($_GET("flags") == 0)) {
+        //    /*No invoco el modal de las banderas*/
+        $('#flags').modal('hide')
+    }
+
+   
 
     /*=============================================*/
     /*Asignar URL a Bandera de modal*/
@@ -82,7 +94,7 @@ _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
-/*script img hover optimizado*/
+/*Clientes img hover optimizado*/
 $(function () {
     $('.cliente li img').mouseover(function () {
         tag = $(this).attr("id");
@@ -96,3 +108,6 @@ $(function () {
      });
 });
 
+$('.close').click(function () {
+    document.getElementById('myvideo').pause();
+});
