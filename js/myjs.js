@@ -53,8 +53,8 @@ $(document).ready(function () {
         interval: 4000
     });
 
-
-   
+    /*Forzo a mostrar clientes*/
+    $('.carousel clientes').carousel('show')
 });/*Fin Document ready*//*=============================================*/
 
 /* Js Facebook*/
