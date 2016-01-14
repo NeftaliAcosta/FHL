@@ -18,32 +18,43 @@ $(document).ready(function () {
     }
     if (($_GET("flags") == 0)) {
         //    /*No invoco el modal de las banderas*/
-        $('#flags').modal('hide')
+        $('#flags').modal('hide');
     }
-    /*Fin*/
+    else {
+        /*invoco el  modal*/
+        var URLactual = jQuery(location).attr('href');
+        var efh = 'http://efh.com.mx/';
+        var mx = 'http://efh.mx/';
+        var corp = 'http://efhcorporativo.com/';
+        var fh = 'http://fhenlinea.com/';
+        var ht = 'http://localhost:58702/';
+        $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
+        if ((fh == URLactual) || (ht== URLactual)) {
+            $('.mflags a').mouseover(function () {
+                country = $(this).attr("id");
+                param = '?flags=0'
+            if (country == 'http://efh.mx') {
+                $("a").prop("href", URLactual + param)
+            }
+            else {
+                $("a").prop("href", country + param)
+            }
+            })
+        }
+        else {
+            /*Asignar URL a Bandera de modal*/
+            $('.mflags a').mouseover(function () {
+                param = '?flags=0'
+                country = $(this).attr("id");
+                $("a").prop("href", country + param)
+            })
+        }
+    }
+    /*Fin Evitar que cargue modal de banderas y ocultarlo*/
+
+    
 
 
-    /*=============================================*/
-    /*Obtener banderas por dominio*/
-    $(location).attr('href');
-    var pathname = window.location.pathname;
-    var localhost = 'http://localhost:52409/'
-    var mx = 'http://www.efh.mx/'
-    var corp = 'http://efhcorporativo.com/'
-    //if ((localhost == window.location) || (mx == window.location) || (corp==windows.location)) {
-    //    /*Invoco el modal siempre que se acceda a un dominio*/
-    //    $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' })
-    //}
-    
-    
-    
-
-    /*Asignar URL a Bandera de modal*/
-    $('.mflags a').mouseover(function () {
-        param = '?flags=0'
-        country = $(this).attr("id");
-        $("a").prop("href", country + param)
-    })
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
     $('#carousel1').carousel({
@@ -53,7 +64,7 @@ $(document).ready(function () {
         interval: 4000
     });
 
-    /*Forzo a mostrar clientes*/
+
     $('.carousel clientes').carousel('show')
 });/*Fin Document ready*//*=============================================*/
 

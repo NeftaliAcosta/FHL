@@ -1621,19 +1621,6 @@ Estilo adicional  personalizado
    opacity: 0.8!important;
 }   
 
-.mflags{
-   background-color: #FFF!important;
-   opacity: 1!important;
-}  
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/V1
-
-
-=======
 .txtpais{
     padding-top: -10px;
 }
@@ -1644,8 +1631,7 @@ Estilo adicional  personalizado
     color: #000;
 }
 
-<<<<<<< HEAD
-=======
+
 .txtpais{
     padding-top: -10px;
 }
@@ -1656,12 +1642,12 @@ Estilo adicional  personalizado
     color: #000;
 }
 
-=======
->>>>>>> refs/remotes/origin/V1
+
+
 li spanl .desc{
     height:120px;
 }
->>>>>>> refs/remotes/origin/V1
+
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
