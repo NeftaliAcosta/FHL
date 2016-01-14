@@ -1,31 +1,12 @@
 ﻿
 
 $(document).ready(function () {
-   
-  
-    /*Deteccion de país*/
-    //$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
-    //    alert('País: ' + data.address.country + ' Código:' + data.address.country_code);
-    //});
-    /*=============================================*/
-
+    /*Evitar que cargue modal de banderas y ocultarlo*/
     function $_GET(param) {
-        /* Obtener la url completa */
         url = document.URL;
-        /* Buscar a partir del signo de interrogación ? */
         url = String(url.match(/\?+.+/));
-        /* limpiar la cadena quitándole el signo ? */
         url = url.replace("?", "");
-        /* Crear un array con parametro=valor */
         url = url.split("&");
-
-        /* 
-        Recorrer el array url
-        obtener el valor y dividirlo en dos partes a través del signo = 
-        0 = parametro
-        1 = valor
-        Si el parámetro existe devolver su valor
-        */
         x = 0;
         while (x < url.length) {
             p = url[x].split("=");
@@ -35,6 +16,12 @@ $(document).ready(function () {
             x++;
         }
     }
+    if (($_GET("flags") == 0)) {
+        //    /*No invoco el modal de las banderas*/
+        $('#flags').modal('hide')
+    }
+    /*Fin*/
+
 
     /*=============================================*/
     /*Obtener banderas por dominio*/
@@ -49,32 +36,26 @@ $(document).ready(function () {
     //}
     
     
-    if (($_GET("flags") == 0)) {
-        //    /*No invoco el modal de las banderas*/
-        $('#flags').modal('hide')
-    }
+    
 
-   
-
-    /*=============================================*/
     /*Asignar URL a Bandera de modal*/
     $('.mflags a').mouseover(function () {
         param = '?flags=0'
         country = $(this).attr("id");
         $("a").prop("href", country + param)
     })
-    /*=============================================*/
- 
-    /*crouseles*/
-    /*Carga el efecto carousel al iniciar el sitio*/
+    /*Carga el efecto carousel al iniciar el sitio
+    de los div de twiiter embed*/
     $('#carousel1').carousel({
         interval: 3999
     });
     $('#carousel2').carousel({
         interval: 4000
     });
-    /*=============================================*/
-});
+
+    /*Forzo a mostrar clientes*/
+    $('.carousel clientes').carousel('show')
+});/*Fin Document ready*//*=============================================*/
 
 /* Js Facebook*/
 (function(d, s, id) {
@@ -90,12 +71,11 @@ $(document).ready(function () {
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
 _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-    $.src="//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X";z.t=+new Date;$.
-    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+$.src="//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
 /*Clientes img hover optimizado*/
-$(function () {
     $('.cliente li img').mouseover(function () {
         tag = $(this).attr("id");
         var src = "img/fhl/" + tag + ".jpg";
@@ -106,8 +86,9 @@ $(function () {
             $(this).attr("src", src);
         
      });
-});
 
+
+/*Pauso vieo al cerrar modal*/
 $('.close').click(function () {
     document.getElementById('myvideo').pause();
 });

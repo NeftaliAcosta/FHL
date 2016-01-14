@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
 		pattern: 'none', 			/* 'pattern_0', 'pattern_1' ... 'pattern_15' or 'none'  -  you can use if layout isn't  'full-width' */
 		bg: 'none', 				/* 'image_0',  'image_1'  ... 'image_3' or 'none'  -  you can use if layout isn't  'full-width' */
 		layout: 'full-width', 		/* 'full-width', 'boxed', 'boxed-attached'  */
-		topNavBarStyle: 'static', 	/* 'static', 'fixed'  */
+		topNavBarStyle: 'fixed', 	/* 'static', 'fixed'  */
 		sideBarPosition: 'left', 	/* 'left', 'right'  */
 		sideBarWidth: 'maxi' 		/* 'maxi', 'mini'  */
 	}
