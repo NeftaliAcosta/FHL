@@ -2,7 +2,7 @@
     var URLdomain = window.location;
     dom = window.location.host;
     doma = 'http://' + dom + '/';
-    if (URLdomain==doma){
+    if (URLdomain == doma) {
         /*Se detecta URL limpia y cargo el modal de paises*/
         var efh = 'http://efh.com.mx/';
         var mx = 'http://efh.mx/';
@@ -35,7 +35,7 @@
                 $("a").prop("href", country + param);
             })
         }
-        
+
     }
     else {
         /*No invoco el modal de las banderas*/
@@ -43,13 +43,41 @@
     }
 
 
-    var URLsearch = window.location.search;
-    alert(URLsearch);
+    /*Proceso de invacion de modal por parametros*/
+    function $_GET(param) {
+        url = document.URL;
+        url = String(url.match(/\?+.+/));
+        url = url.replace("?", "");
+        url = url.split("&");
+        x = 0;
+        while (x < url.length) {
+            p = url[x].split("=");
+            if (p[0] == param) {
+                return decodeURIComponent(p[1]);
+            }
+            x++;
+        }
+    }
+    if (($_GET("producto") == 'psicosoft')) {
+        $('#psicosoft').modal('show')
+    }
+    else if (($_GET("producto") == 'psicoweb')) {
+        $('#psicoweb').modal('show')
+    }
+    else if (($_GET("producto") == 'lpc')) {
+        $('#lpc').modal('show')
+    }
+    else if (($_GET("producto") == 'meol')) {
+        $('#meol').modal('show')
+    }
+    else if (($_GET("producto") == 'ecoclima')) {
+        $('#ecoclima').modal('show')
+    }
 
 
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
-    $('#carousel1').carousel({
+    $('#productos').carousel({
         interval: 3999
     });
     $('#carousel2').carousel({
@@ -61,7 +89,7 @@
 });/*Fin Document ready*//*=============================================*/
 
 /* Js Facebook*/
-(function(d, s, id) {
+(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
@@ -71,24 +99,28 @@
 
 
 /*zopin*/
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-$.src="//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X";z.t=+new Date;$.
-type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+window.$zopim || (function (d, s) {
+    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+    d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+        z.set.
+        _.push(o)
+    }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+    $.src = "//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X"; z.t = +new Date; $.
+    type = "text/javascript"; e.parentNode.insertBefore($, e)
+})(document, "script");
 
 
 /*Clientes img hover optimizado*/
-    $('.cliente li img').mouseover(function () {
-        tag = $(this).attr("id");
-        var src = "img/fhl/" + tag + ".jpg";
+$('.cliente li img').mouseover(function () {
+    tag = $(this).attr("id");
+    var src = "img/fhl/" + tag + ".jpg";
+    $(this).attr("src", src);
+})
+    .mouseout(function () {
+        var src = $(this).attr("src").replace("img/fhl/" + tag + ".jpg", "img/fhl/" + tag + "n.jpg");
         $(this).attr("src", src);
-    })
-        .mouseout(function () {
-            var src = $(this).attr("src").replace("img/fhl/" + tag + ".jpg", "img/fhl/" + tag + "n.jpg");
-            $(this).attr("src", src);
-        
-     });
+
+    });
 
 
 /*Pauso video al cerrar modal*/

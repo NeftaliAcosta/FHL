@@ -1670,6 +1670,12 @@ li spanl .desc{
         width: 20%;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .col-lg-2 {
+        width: 20%;
+    }
+}
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
