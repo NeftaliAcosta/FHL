@@ -86,6 +86,7 @@
 
 
     $('.carousel clientes').carousel('show')
+  
 });/*Fin Document ready*//*=============================================*/
 
 /* Js Facebook*/
@@ -127,3 +128,5 @@ $('.cliente li img').mouseover(function () {
 $('.close').click(function () {
     document.getElementById('myvideo').pause();
 });
+
+
