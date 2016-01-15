@@ -43,13 +43,41 @@
     }
 
 
-    var URLsearch = window.location.search;
-    alert(URLsearch);
+    /*Proceso de invacion de modal por parametros*/
+    function $_GET(param) {
+        url = document.URL;
+        url = String(url.match(/\?+.+/));
+        url = url.replace("?", "");
+        url = url.split("&");
+        x = 0;
+        while (x < url.length) {
+            p = url[x].split("=");
+            if (p[0] == param) {
+                return decodeURIComponent(p[1]);
+            }
+            x++;
+        }
+    }
+    if (($_GET("producto") == 'psicosoft')) {
+        $('#psicosoft').modal('show')
+    }
+    else if (($_GET("producto") == 'psicoweb')) {
+        $('#psicoweb').modal('show')
+    }
+    else if (($_GET("producto") == 'lpc')) {
+        $('#lpc').modal('show')
+    }
+    else if (($_GET("producto") == 'meol')) {
+        $('#meol').modal('show')
+    }
+    else if (($_GET("producto") == 'ecoclima')) {
+        $('#ecoclima').modal('show')
+    }
 
 
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
-    $('#carousel1').carousel({
+    $('#productos').carousel({
         interval: 3999
     });
     $('#carousel2').carousel({
