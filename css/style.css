@@ -1631,25 +1631,17 @@ Estilo adicional  personalizado
     color: #000;
 }
 
-.myfooter{
-    display:block;
-    align-items:center;
-}
 
 .txtpais{
     padding-top: -10px;
 }
-.mp{
-    margin-top: -1em;
+.myp{
+    margin-top: -2em;
+    /* background-color: #000; */
     text-align: center;
-    font-size: 12px!important;
     color: #000;
-    margin-bottom: 8px;
-    display: block;
 }
-h4, .h4 {
-    font-size: 13px!important;
-}
+
 
 
 li spanl .desc{
@@ -1674,18 +1666,10 @@ li spanl .desc{
 }
 
 @media (min-width: 1200px) {
-    .mflags .col-lg-2 {
+    .col-lg-2 {
         width: 20%;
     }
 }
-
-
-@media screen and (min-width: 768px){
- .mflags .col-lg-2 {
-        width: 20%;
-    }
-}
-
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
