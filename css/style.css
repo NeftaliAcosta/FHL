@@ -1648,6 +1648,28 @@ li spanl .desc{
     height:120px;
 }
 
+.aviso p{
+    text-align:justify;
+}
+
+.aviso a{
+    color: #FFF;
+}
+
+.flag-wrapper {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+   
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+    .col-lg-2 {
+        width: 20%;
+    }
+}
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
