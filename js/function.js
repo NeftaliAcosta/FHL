@@ -89,7 +89,7 @@ $(function(){
 				'transitionIn' : 'fade',
 				'transitionOut' : 'fade',
 				'title' : this.title,
-				'href': this.href.replace(new RegExp("watch\\?v=daphOqP2oKs", "i"), 'v/'),
+				'href' : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
 				'type' : 'swf',
 				'swf' : {
 					'wmode' : 'transparent',
@@ -176,8 +176,8 @@ function map(){
 }
 
 function map_initialize() {
-    var myLatlngCenter = new google.maps.LatLng(19.3474432, -99.1816424,17.8);
-    var myMarker = new google.maps.LatLng(19.3474432, -99.1816424,17.8);
+    var myLatlngCenter = new google.maps.LatLng(32.83823,-96.775347); 
+    var myMarker = new google.maps.LatLng(32.83823,-96.775347);
 
 
     var mapEl = document.getElementById('map');
@@ -192,8 +192,8 @@ function map_initialize() {
         var marker1 = new google.maps.Marker({
             position: myMarker,
             map: map,
-            title:"Factor Humano en Linea",
-            icon: 'img/fhl/puntero.png'
+            title:"5321 E Mockingbird Ln, Dallas, TX 75206",
+            icon: 'img/map_marker.png'
         });
         google.maps.event.addDomListener(window, 'resize', function() {
             map.setCenter(myLatlngCenter);

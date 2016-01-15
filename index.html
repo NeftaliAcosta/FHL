@@ -1,14 +1,9 @@
-﻿<!DOCTYPE HTML>
-<html lang="es-mx">
+<!DOCTYPE HTML>
+<html>
     <head>
 		<meta charset="utf-8">
-        <title>Factor Humano en Línea</title>
-        <meta name="description" content="Factor Humano en Línea es una empresa mexicana que ofrece soluciones en tecnología para áreas de Factor Humano">
-        <meta name="keywords" content="factor humano, recursos humanos,reclutamiento humano, software de reclutamiento, pruebas psicométricas automátizadas, sistema, psicométrico, psicoweb, psicosoft">
-        <meta name="robots" content="index,nofollow">
-        <meta name="googlebot" content="index, follow, imageindex" />
-        <link rel="icon" type="image/vnd.microsoft.icon"  href="favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bizStrap ONE - Business and Infographics Themes for Twitter Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
         <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
         <link type="text/css" rel="stylesheet" href="js/rs-plugin/css/settings.css" />
@@ -16,17 +11,31 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
         <link type="text/css" rel="stylesheet" href="css/style.css" />
         <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
-        <link type="text/css" rel="stylesheet" href="css/media.css" />   
-       
-     
+        <link type="text/css" rel="stylesheet" href="css/media.css" />        
     </head>
+
     <body>
-        <div id="fb-root"></div>
+
         <div id="container" class="main">
             <div id="out">
                 <div id="home_marker"></div>
                 <div id="header">
                     <div class="inner">
+                        
+                        <!-- start notification bar -->
+                        <div class="notify-bar">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-11 col-xs-11 col-sm-11">
+                                        <!-- enter notification message here -->
+                                        <p>Optional notification bar for displaying important messages to your clients and colleagues. It only shows when you want it to.</p>
+                                    </div>
+                                    <div class="col-md-1 col-xs-1 col-sm-1"><a href="#" class="notify-close"><i class="icon-remove-sign"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /end notification bar -->
+                        
                         <!-- start top grey bar -->
                         <div class="top">
                             <div class="container">
@@ -35,14 +44,14 @@
 										<div class="contacts_block">
 											<!-- edit social icons here -->
 											<ul class="social_links clearfix">
-												<li><a href="https://www.facebook.com/Factor-Humano-en-L%C3%ADnea-920609784641238/" class="fb styler_bg_color"></a></li>
-												<li><a href="https://twitter.com/fhenlinea" class="tw styler_bg_color"></a></li>
-												<!--<li><a href="#" class="pi styler_bg_color"></a></li>-->
+												<li><a href="#" class="fb styler_bg_color"></a></li>
+												<li><a href="#" class="tw styler_bg_color"></a></li>
+												<li><a href="#" class="pi styler_bg_color"></a></li>
 												<li><a href="#" class="in styler_bg_color"></a></li>
-												<!--<li><a href="#" class="share styler_bg_color"></a></li>-->
+												<li><a href="#" class="share styler_bg_color"></a></li>
 											</ul>
 											<!-- edit phone number here -->
-											<div class="phone styler_color">CONTÁCTANOS     <span>5663-3220</span></div>
+											<div class="phone styler_color">CALL US TOLL FREE <span>866.877.8899</span></div>
 											<div class="clear"></div>
 										</div>
 									</div>
@@ -58,7 +67,7 @@
                                 <div class="row">
                                     <div class="col-md-2 col-xs-12 col-sm-2">
                                         <!-- your logo goes here -->
-                                        <a href="#" id="logo"><img src="img/fhl/logo2.png" alt="" /></a>
+                                        <a href="#" id="logo"><img src="img/logo.png" alt="" /></a>
                                     </div>
                                     <div class="col-md-10 col-xs-12 col-sm-10">
                                         <div id="top_menu">
@@ -72,13 +81,19 @@
 												<div class="navbar-collapse">
 													<ul class="nav nav-pills">
 														<!-- navigation menus here -->
-														<li><a href="#home_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">INICIO</a></li>
-														<li><a href="#features_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">ESTADISTICAS</a></li>
-														
-														<li><a href="#portfolio_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">PRODUCTOS   </a></li>
-														<li><a href="#about_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">NOSOTROS</a></li>
-                                                        <li><a href="#clientes_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">CLIENTES</a></li>
-														<li><a href="#contact_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">CONTACTO</a></li>
+														<li><a href="#home_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">Home</a></li>
+														<li><a href="#features_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">FEATURES</a></li>
+														<li class="dropdown">
+															<a href="#" class="dropdown-toggle styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color" data-toggle="dropdown">External pages</a>
+															<ul class="dropdown-menu">
+																<li><a href="library.html" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">Info Graphics Library</a></li>
+																<li><a href="inside.html" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">Inside Page</a></li>
+															</ul>
+														</li>
+														<li><a href="#portfolio_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">PORTFOLIO</a></li>
+														<li><a href="#blog_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">BLOG</a></li>
+														<li><a href="#about_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">ABOUT US</a></li>
+														<li><a href="#contact_anchor" class="styler_hover_bg_color styler_active_bg_color styler_hover_color styler_active_color">CONTACT</a></li>
 													</ul>
 												</div>
                                             </div>
@@ -101,72 +116,96 @@
                                 <!-- slide 1 -->
                                 <li class="slide1" data-transition="slotzoom-horizontal" data-slotamount="5"  data-masterspeed="300">
                                     <!-- slide 1 main image -->
-                                    <img alt="" src="img/fhl/slide1.png" />
+                                    <img alt="" src="img/slide1.jpg" />
                                     <div class="caption sft" data-x="15" data-y="60" data-speed="2500" data-start="1000" data-easing="easeInBack">
-                                        <!-- slide 1 caption 1 class=cap-1 -->
-                                       <p class="txtslider">CREADORES DE    LAS HERRAMIENTAS LÍDERES DEL MERCADO</p>
+                                        <!-- slide 1 caption 1 -->
+                                        <p class="cap-1">WHATEVER IT IS, BIZSTRAP ONE CAN HELP YOU ACHEIVE IT.</p>
                                     </div>
                                     <div class="caption sfl" data-x="15" data-y="100" data-speed="1500" data-start="1000" data-easing="easeInBack">
                                         <!-- slide 1 caption 2 -->
-                                        <p class="cap-2"><span>Más</span><br /><span>de 20 años</span><br /><span>nos respaldan</span></p>
+                                        <p class="cap-2"><span>WHAT WOULD YOU DO</span><br /><span>IF YOU HAD THE WORLD</span><br /><span>ON A STRING?</span></p>
                                     </div>
                                     <div class="caption sfl" data-x="15" data-y="280" data-speed="1500" data-start="1000" data-easing="easeInBack">
                                         <!-- slide 1 caption 3 -->
-                                        <br class="cap-3"><p class="txtslider">Comprometidos con la Excelencia en Recursos Humanos.
-                                        </p>
+                                        <p class="cap-3">bizStrap ONE is designed specifically to help your business take off.<br /> 
+                                            Elegant design and amazing built-in tools help you bring your vision to world.</p>
                                     </div>
                                 </li>
                                 <!-- slide 2 -->
                                 <li class="slide2" data-transition="boxfade" data-slotamount="5"  data-masterspeed="300">
                                     <!-- slide 2 main image -->
-                                    <img alt="" src="img/fhl/slide2.png" />
+                                    <img alt="" src="img/slide2.jpg" />
                                     <div class="caption sft" data-x="15" data-y="40" data-speed="1500" data-start="400" data-easing="easeInBack">
                                         <!-- slide 2 caption 1 -->
-                                        <!--<p class="cap-1">STATISTICS SAY YOU HAVE 3 SECONDS TO<br />CAPTURE YOUR WEBSITE VISITOR’S ATTENTION.</p>-->
+                                        <p class="cap-1">STATISTICS SAY YOU HAVE 3 SECONDS TO<br />CAPTURE YOUR WEBSITE VISITOR’S ATTENTION.</p>
                                     </div>
                                     <div class="caption sfl" data-x="15" data-y="115" data-speed="1500" data-start="700" data-easing="easeInBack">
                                         <!-- slide 2 caption 2 -->
-                                        <p class="cap-2"><span>MÁS DE 1,000,000 TALENTOS</span><br />
-                                            <span>CONTRATADOS CADA AÑO</span>
+                                        <p class="cap-2"><span>HOW WILL YOU MAKE</span><br />
+                                            <span>THOSE SECONDS COUNT?</span>
                                         </p>
                                     </div>
                                     <div class="caption sfl" data-x="15" data-y="245" data-speed="1500" data-start="1000" data-easing="easeInBack">
-                                        <!-- slide 2 caption class="cap-3" -->
-                                        <p class="txtslider2">
-                                            Nuestro sistema es utilizado para reclutar talento <br />en recursos humanos en
-                                            México, América Latina y El Caribe.
-                                        </p>
+                                        <!-- slide 2 caption 3 -->
+                                        <p class="cap-3">bizstrap One includes an entire library of awesome<br />
+                                            info graphics that grab site visitor’s attention, and<br />
+                                            helps you tell your story in a visually compelling way<br /> 
+                                            that produces results.</p>
                                     </div>
                                     <div class="caption sfr" data-x="480" data-y="40" data-speed="2000" data-start="700" data-easing="easeInBack">
                                         <!-- slide 2 layer image 1 -->
-                                        <!--<img src="img/graph2_1.png" alt="" />-->
+                                        <img src="img/graph2_1.png" alt="" />
                                     </div>
                                     <div class="caption sfr" data-x="480" data-y="175" data-speed="2000" data-start="1000" data-easing="easeInBack">
                                         <!-- slide 2 layer image 2 -->
-                                       <!-- <img src="img/graph2_2.png" alt="" />-->
+                                        <img src="img/graph2_2.png" alt="" />
                                     </div>
                                     <div class="caption sfr" data-x="480" data-y="245" data-speed="2000" data-start="1300" data-easing="easeInBack">
                                         <!-- slide 2 layer image 3 -->
-                                        <!--<img src="img/graph2_3.png" alt="" />-->
+                                        <img src="img/graph2_3.png" alt="" />
                                     </div>
                                     <div class="caption sfr" data-x="480" data-y="300" data-speed="2000" data-start="1700" data-easing="easeInBack">
                                         <!-- slide 2 layer image 4 -->
-                                        <!--<img src="img/graph2_4.png" alt="" />-->
+                                        <img src="img/graph2_4.png" alt="" />
                                     </div>
                                     <div class="caption sft" data-x="820" data-y="25" data-speed="2000" data-start="1900" data-easing="easeInBack">
                                         <!-- slide 2 layer image 5 -->
-                                       <!-- <img src="img/graph2_6.png" alt="" />-->
+                                        <img src="img/graph2_6.png" alt="" />
                                     </div>
                                     <div class="caption sfb" data-x="820" data-y="170" data-speed="2000" data-start="2200" data-easing="easeInBack">
                                         <!-- slide 2 layer image 6 -->
-                                        <!--<img src="img/graph2_5.png" alt="" />-->
+                                        <img src="img/graph2_5.png" alt="" />
                                     </div>                      
                                     <div class="caption sft hidden-phone" data-x="585" data-y="120" data-speed="1500" data-start="100" data-easing="easeInBack">
                                         <!-- slide 2 caption 4 -->
-                                        <!--<p class="cap-4"><span class="first">3</span><br /><br /><br /><span class="second">seconds</span></p>-->
+                                        <p class="cap-4"><span class="first">3</span><br /><br /><br /><span class="second">seconds</span></p>
                                     </div>
                                 </li>
-                               
+                                <!-- slide 3 -->
+                                <li class="slide3" data-transition="boxfade" data-slotamount="5"  data-masterspeed="300">
+                                    <!-- slide 3 main image -->
+                                    <img alt="" src="img/slide3.jpg" />
+                                    <div class="caption sft" data-x="15" data-y="75" data-speed="2500" data-start="1000" data-easing="easeInBack">
+                                        <!-- slide 3 caption 1 -->
+                                        <p class="cap-1">LOOKS AWESOME ON PRACTICALLY ALL DEVICES.</p>
+                                    </div>
+                                    <div class="caption sfl" data-x="15" data-y="115" data-speed="1500" data-start="1000" data-easing="easeInBack">
+                                        <!-- slide 3 caption 2 -->
+                                        <p class="cap-2"><span>INCREDIBLY FRESH</span><br />
+                                            <span>& RESPONSIVE!</span>
+                                        </p>
+                                    </div>
+                                    <div class="caption sfl" data-x="15" data-y="235" data-speed="1500" data-start="1000" data-easing="easeInBack">
+                                        <!-- slide 3 caption 3 -->
+                                        <p class="cap-3">bizStrap ONE packs incredibly fresh design<br />
+                                            and looks awesome on practically any device,<br />
+                                            including computers, tablets and phones.</p>
+                                    </div>
+                                    <div class="caption sfb" data-x="480" data-y="75" data-speed="2000" data-start="1000" data-easing="easeInBack">
+                                        <!-- slide 3 layer image 1 -->
+                                        <img src="img/devices.png" alt="" />
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -174,32 +213,29 @@
                     
                     <div class="container">
                         <!-- call to action bar -->
-                        <div class="order_block"><i></i><a href="#contacto" class="order_btn styler_bg_color">AHORA!</a> <span>Pregunta por nuestros paquetes</span></div>
+                        <div class="order_block"><i></i><a href="#" class="order_btn styler_bg_color">BUY NOW</a> <span>Add a call to action bar anywhere!</span></div>
                         
                         <!-- start infogrphics bar -->
                         <div id="features_marker"></div>
                         <div class="infograph">
                             <sup class="styler_bg_color"></sup>
                             <!-- infographics bar headline -->
-                            <div class="header styler_color">Estadísticas FHL</div>
+                            <div class="header styler_color">AWESOME INFOGRAPHICS</div>
                             <div class="row">
                                 <!-- infographic column 1 -->
                                 <div class="col-md-3 col-xs-3 col-sm-3">
                                     <div class="graph">
                                         <div class="graph_inner">
                                             <!-- infographic column 1 - large number -->
-                                             
-                                            <div class="large_num styler_color">15+</div>
-                                            <div class="progress_bars_with_image_title styler_color">Paises</div>
-                                        
+                                            <div class="large_num styler_color">321</div>
                                         </div>
                                     </div>
                                     <div class="desc styler_bg_color">
                                         <i class="styler_border_color"></i>
                                         <!-- infographics column 1 headline -->
-                                        <!--<div class="name">FACT 1</div>-->
+                                        <div class="name">FACT 1</div>
                                         <!-- infographics column 1 text body -->
-                                        <div class="text">FHL Cuenta con presencia en más de 15 países de América Latina y el Caribe.</div>
+                                        <div class="text">Number of Twitter Bootstrap sites that go live every hour.</div>
                                     </div>
                                 </div>
                                 <!-- infographic column 2 -->
@@ -207,17 +243,17 @@
                                     <div class="graph">
                                         <div class="graph_inner">
                                             <!-- infographic column 2 - contrasting icons -->
-                                            <div class="progress_bars_with_image styler_infograph" data-number="8" data-value="8" data-icon="icon-male" data-height="40" data-color="#0eae9b"></div>
+                                            <div class="progress_bars_with_image styler_infograph" data-number="8" data-value="5" data-icon="icon-male" data-height="40" data-color="#0eae9b"></div>
                                             <!-- infographic column 2 - contrasting icons caption -->
-                                            <div class="progress_bars_with_image_title styler_color">1,000,000+</div>
+                                            <div class="progress_bars_with_image_title styler_color">5 in every 8</div>
                                         </div>
                                     </div>
                                     <div class="desc styler_bg_color">
                                         <i class="styler_border_color"></i>
                                         <!-- infographics column 2 headline -->
-                                        <!--<div class="name">FACT 2</div>-->
+                                        <div class="name">FACT 2</div>
                                         <!-- infographics column 2 text body -->
-                                        <div class="text">Más de un millon de candidatos son evaluados con nuestras herramientas anualmente.</div>
+                                        <div class="text">New developers learning Twitter Bootstrap each month.</div>
                                     </div>
                                 </div>
                                 <!-- infographic column 3 -->
@@ -227,26 +263,26 @@
                                             <!-- infogrphic column 3 progress bars -->
                                             <div class="progress_bars_block">
                                                 <!-- progress bar caption -->
-                                                <div class="progress_bars_caption styler_color">Preferencias</div>
+                                                <div class="progress_bars_caption styler_color">WEBSITE DESIGN & DEVELOPMENT</div>
                                                 <!-- progress bar -->
-                                                <div class="progress_bars horizontal style1 styler_infograph" data-width="220" data-height="15" data-color="#0eae9b" data-title="inner" data-value="80%"></div>
+                                                <div class="progress_bars horizontal style1 styler_infograph" data-width="220" data-height="15" data-color="#0eae9b" data-title="inner" data-value="75%"></div>
                                                 <!-- progress bar caption -->
-                                                <div class="progress_bars_caption styler_color">Soporte</div>
+                                                <div class="progress_bars_caption styler_color">iOS DEVELOPMENT</div>
                                                 <!-- progress bar -->
-                                                <div class="progress_bars horizontal style1 styler_infograph" data-width="220" data-height="15" data-color="#0eae9b" data-title="inner" data-value="99.99%"></div>
+                                                <div class="progress_bars horizontal style1 styler_infograph" data-width="220" data-height="15" data-color="#0eae9b" data-title="inner" data-value="60%"></div>
                                                 <!-- progress bar caption -->
-                                                <div class="progress_bars_caption styler_color">Estabilidad</div>
+                                                <div class="progress_bars_caption styler_color">INFO GRAPHICS</div>
                                                 <!-- progress bar -->
-                                                <div class="progress_bars horizontal style1 styler_infograph" data-width="220" data-height="15" data-color="#0eae9b" data-title="inner" data-value="99.99%"></div>
+                                                <div class="progress_bars horizontal style1 styler_infograph" data-width="220" data-height="15" data-color="#0eae9b" data-title="inner" data-value="50%"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="desc styler_bg_color">
                                         <i class="styler_border_color"></i>
                                         <!-- infographics column 3 headline -->
-                                        <!--<div class="name">FACT 3</div>-->
+                                        <div class="name">FACT 3</div>
                                         <!-- infographics column 3 text body -->
-                                        <div class="text">8 de cada 10 empresas nos prefieren por la estabilidad de nuestros sitemas y calidad de nuestra asistencia técnica.</div>
+                                        <div class="text">Web developers prefer working with Twitter Bootstrap.</div>
                                     </div>
                                 </div>
                                 <!-- infographic column 4 -->
@@ -254,15 +290,15 @@
                                     <div class="graph">
                                         <div class="graph_inner">
                                             <!-- infogrphic column 4 pie chart -->
-                                            <div class="easy-pie-chart styler_infograph" data-percent="90" data-trackColor="#6ed1ff" data-color="#0eae9b" data-lineWidth="25" data-size="126" aria-valuetext="92" data-cap="butt"></div>
+                                            <div class="easy-pie-chart styler_infograph" data-percent="70" data-trackColor="#6ed1ff" data-color="#0eae9b" data-lineWidth="25" data-size="126" data-cap="butt"></div>
                                         </div>
                                     </div>
                                     <div class="desc styler_bg_color">
                                         <i class="styler_border_color"></i>
                                         <!-- infographics column 4 headline -->
-                                        <!--<div class="name">FACT 4</div>-->
+                                        <div class="name">FACT 4</div>
                                         <!-- infographics column 4 text body -->
-                                        <div class="text">El 92% de nuestros clientes nos recomiendan como herramienta principal para reclutamiento.</div>
+                                        <div class="text">Percent of Twitter Bootstrap websites created from templates.</div>
                                     </div>
                                 </div>
                             </div>
@@ -274,71 +310,58 @@
                         <div class="mod row">
                             <!-- portfolio headline -->
 							<div class="col-md-12 col-xs-12 col-sm-12">
-								<div class="caption styler_color">PRODUCTOS</div>
+								<div class="caption styler_color">PORTFOLIO</div>
 								<div class="carousel portfolio">
 									<ul>
 										<li>
-											<a href="#" data-toggle="modal" data-target="#psicosoft" data-backdrop="static" data-keyboard="false" class="photo styler_parent">
+											<a href="#" class="photo styler_parent">
 												<!-- portfolio image -->
-												<span class="img"><i class="styler_bg_color"></i><img src="img/fhl/psicosoft.png" alt=""  /></span>
+												<span class="img"><i class="styler_bg_color"></i><img src="img/img2.jpg" alt="" /></span>
 												<span class="text styler_hover_border_color">
 													<i class="styler_border_color"></i>
 													<!-- portfolio item name -->
-													<span class="name">PsicoSoft</span>
+													<span class="name">Project #1</span>
 													<!-- portfolio description -->
-													<span class="desc">Sistemas de pruebas Psicométricas</span>
+													<span class="desc">web design</span>
 												</span>
 											</a>
 										</li>
 										<li>
-											<a href="#" data-toggle="modal" data-target="#psicoweb" data-backdrop="static" data-keyboard="false" class="photo styler_parent">
+											<a href="#" class="photo styler_parent">
 												<!-- portfolio image -->
-												<span class="img"><i class="styler_bg_color"></i><img src="img/fhl/psicoweb.png" alt="" /></span>
+												<span class="img"><i class="styler_bg_color"></i><img src="img/img.jpg" alt="" /></span>
 												<span class="text styler_hover_border_color">
 													<i class="styler_border_color"></i>
 													<!-- portfolio item name -->
-													<span class="name">PsicoWeb</span>
+													<span class="name">Project #2</span>
 													<!-- portfolio description -->
-													<span class="desc">Pruebas Psicométricas Vía Web</span>
+													<span class="desc">application development</span>
 												</span>
 											</a>
 										</li>
 										<li>
-											<a href="#" data-toggle="modal" data-target="#spc" data-backdrop="static" data-keyboard="false" class="photo styler_parent">
+											<a href="#" class="photo styler_parent">
 												<!-- portfolio image -->
-												<span class="img"><i class="styler_bg_color"></i><img src="img/fhl/lpc.png" alt="" /></span>
+												<span class="img"><i class="styler_bg_color"></i><img src="img/img3.jpg" alt="" /></span>
 												<span class="text styler_hover_border_color">
 													<i class="styler_border_color"></i>
 													<!-- portfolio item name -->
-													<span class="name">SPC</span>
+													<span class="name">Project #3</span>
 													<!-- portfolio description -->
-													<span class="desc">Líder Por Competencias</span>
+													<span class="desc">software development</span>
 												</span>
 											</a>
 										</li>
-                                         <li>
-											<a href="#" data-toggle="modal" data-target="#conociweb" data-backdrop="static" data-keyboard="false" class="photo styler_parent">
+										<li>
+											<a href="#" class="photo styler_parent">
 												<!-- portfolio image -->
-												<span class="img"><i class="styler_bg_color"></i><img src="img/fhl/conociweb.png" alt="" /></span>
+												<span class="img"><i class="styler_bg_color"></i><img src="img/img4.jpg" alt="" /></span>
 												<span class="text styler_hover_border_color">
 													<i class="styler_border_color"></i>
 													<!-- portfolio item name -->
-													<span class="name">ConociWeb</span>
+													<span class="name">Project #4</span>
 													<!-- portfolio description -->
-													<span class="desc">Conocimiento General</span>
-												</span>
-											</a>
-										</li>
-                                         <li>
-											<a href="#" data-toggle="modal" data-target="#ecoclima" data-backdrop="static" data-keyboard="false" class="photo styler_parent">
-												<!-- portfolio image -->
-												<span class="img"><i class="styler_bg_color"></i><img src="img/fhl/eco.png" alt="" /></span>
-												<span class="text styler_hover_border_color">
-													<i class="styler_border_color"></i>
-													<!-- portfolio item name -->
-													<span class="name">EcoClimaLaboral</span>
-													<!-- portfolio description -->
-													<span class="desc">Clima Laboral de la empresa</span>
+													<span class="desc">software development</span>
 												</span>
 											</a>
 										</li>
@@ -350,205 +373,232 @@
                         </div>
                         <!-- /end portfolio -->
 
-                        
+                        <!-- start blog -->
+                        <div id="blog_marker"></div>
+                        <div class="mod row">
+                            <!-- blog headline -->
+							<div class="col-md-12 col-xs-12 col-sm-12">
+								<div class="caption styler_color">BLOG</div>
+								<div class="carousel articles">
+									<ul>
+										<li>
+											<!-- blog post image -->
+											<a href="#" class="img"><img src="img/img4.jpg" alt="" /></a>
+											<div class="text">
+												<!-- blog post headline -->
+												<div class="name">A Fresh, Clean Twitter Bootstrap Theme</div>
+												<!-- blog post date -->
+												<div class="date">January 15, 2013</div>
+												<!-- blog post summary text -->
+												<div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</div>
+												<div class="more">
+													<!-- link to blog post -->
+													<a href="#" class="styler_color">Read more <i class="icon-circle-arrow-right"></i></a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<!-- blog post image -->
+											<a href="#" class="img"><img src="img/img5.jpg" alt="" /></a>
+											<div class="text">
+												<!-- blog post headline -->
+												<div class="name">A Fresh, Clean Twitter Bootstrap Theme</div>
+												<!-- blog post date -->
+												<div class="date">January 15, 2013</div>
+												<!-- blog post summary text -->
+												<div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</div>
+												<div class="more">
+													<!-- link to blog post -->
+													<a href="#" class="styler_color">Read more <i class="icon-circle-arrow-right"></i></a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<!-- blog post image -->
+											<a href="#" class="img"><img src="img/img6.jpg" alt="" /></a>
+											<div class="text">
+												<!-- blog post headline -->
+												<div class="name">A Fresh, Clean Twitter Bootstrap Theme</div>
+												<!-- blog post date -->
+												<div class="date">January 15, 2013</div>
+												<!-- blog post summary -->
+												<div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</div>
+												<div class="more">
+													<!-- link to blog post -->
+													<a href="#" class="styler_color">Read more <i class="icon-circle-arrow-right"></i></a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<!-- blog post image -->
+											<a href="#" class="img"><img src="img/img7.jpg" alt="" /></a>
+											<div class="text">
+												<!-- blog post headline -->
+												<div class="name">A Fresh, Clean Twitter Bootstrap Theme</div>
+												<!-- blog post date -->
+												<div class="date">January 15, 2013</div>
+												<!-- blog post summary -->
+												<div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</div>
+												<div class="more">
+													<!-- link to blog post -->
+													<a href="#" class="styler_color">Read more</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<a href="#" class="left_arr styler_hover_bg_color"></a>
+									<a href="#" class="right_arr styler_hover_bg_color"></a>
+								</div>
+							</div>
+                        </div>
+                        <!-- /end blog -->
 
                         <!-- start about us -->
                         <div id="about_marker"></div>
                         <div class="mod row" id="about_block">
                             <!-- column 1 caption -->
 							<div class="col-md-12 col-xs-12 col-sm-12">
-                            	<div class="caption styler_color">ACERCA DE FHL</div>
+                            	<div class="caption styler_color">ABOUT US</div>
 							</div>
                             <div class="col-md-6 col-xs-12 col-sm-6">
                                 <div class="article">
                                     <!-- column 1 headline -->
-                                    <h1>¿QUIENES SOMOS?</h1>
+                                    <h1>WHO WE ARE</h1>
                                     <!-- column 1 text -->
-                                    <p class="txtpersonal">
-                                        Factor Humano en Línea, S.A. de C.V. es una empresa mexicana fundada en 1995,
-                                        con sede en 9 países de Centro, Suramérica, El Caribe y presencia en 15 de 
-                                        Iberoamérica, concebida como una organización de servicios y consultoría en 
-                                        tecnologías de información, con orientación total a ofrecer soluciones para 
-                                        las áreas de Factor Humano.   
-                                    </p>
-                                    <p class="txtpersonal">
-                                        La misión de nuestra empresa es ofrecer un servicio logrando un nivel de 
-                                        atención de clase mundial, así como desarrollar, diseñar y comercializar
-                                        sistemas informáticos integrales para selección de personal, reclutamiento, 
-                                        capacitación, plan de vida y carrera, evaluación de competencias laborales y 
-                                        medición de clima laboral.
-                                    </p>
-                                    
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Curabitur pellentesque massa eu nulla consequat sed porttitor arcu porttitor.</p>
+                                    <p>Quisque volutpat pharetra felis, eu cursus lorem molestie vitae. Nulla vehicula, lacus ut suscipit fermentum, turpis felis ultricies dui, ut rhoncus libero augue at libero. Morbi ut arcu dolor. Maecenas id nulla nec nibh viverra vehicula. Cras feugiat, magna eu lacinia ullamcorper, augue est sodales nibh, ut vulputate augue est sed nunc. Suspendisse sagittist.</p>
+                                    <p>Maecenas id nulla nec nibh viverra vehicula. Cras feugiat, magna eu lacinia ullamcorper, augue est sodales nibh, ut vulputate augue est sed nunc. Suspendisse sagittist.</p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-xs-12 col-sm-6">
-                                <div class="article">
+                                <div class="work">
                                     <!-- column 2 caption -->
-                                    <h1>NOSOTROS</h1>
-                                    <!-- Texto -->
-                                    <p class="txtpersonal">
-                                        Nuestro personal cuenta con una vasta experiencia en el área de informática
-                                        y psicometría que aporta indudables beneficios a nuestros clientes. La
-                                        experiencia acumulada durante estos años de trabajo nos permite enfrentar
-                                        cualquier reto y como consecuencia aumentar cualitativamente los servicios
-                                        que ofrecemos. Esto da como resultado la instalación de más de 4,100 módulos
-                                        a nivel mundial del sistema PsicoSoft, PsicoWeb, Líder 360°, Mi Entrevista On Line, Clim@-e, ConociSoft y Perfil del Líder por competencias (LPC). Nuestro objetivo es ser un eslabón esencial como proveedor dentro de su Empresa garantizando tiempos adecuados de respuesta a sus necesidades.
-                                    </p>
+                                    <div class="header">WHAT WE DO</div>
+                                    <!-- steps/process boxes -->
+                                    <ul class="styled_list styler_infograph" data-type="process_box">
+                                        <li>
+                                            <!-- box 1 caption -->
+                                            <div class="name styler_color">PLAN</div>
+                                            <!-- box 1 text -->
+                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                        </li>
+                                        <li>
+                                            <!-- box 2 caption -->
+                                            <div class="name styler_color">DEVELOP & TEST</div>
+                                            <!-- box 2 text -->
+                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                        </li>
+                                        <li>
+                                            <!-- box 3 caption -->
+                                            <div class="name styler_color">IMPLEMENT</div>
+                                            <!-- box 3 text -->
+                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- /end about us -->
 
-                        <!-- star clients us-->
-                        <div id="clientes_marker"></div>
+                        <!-- start team -->
                         <div class="mod row">
-                            <!-- portfolio headline -->
-                            <div class="col-md-12 col-xs-12 col-sm-12">
-                                <div class="caption styler_color">CLIENTES</div>
-                                <div class="carousel portfolio">
-                                    <ul class="cliente">
-                                        <li>
-                                                <!-- cocacola -->
-                                                <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/cocacolan.jpg" alt="cocacola" id="cocacola" /></span>
-                                                <span class="text styler_hover_border_color">
-                                                    <i class="styler_border_color"></i>
-                                                </span>
-                                        </li>
-                                        <li>
-                                            <!-- kraftfoods -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/kraftfoodsn.jpg" alt="kraftfoods" id="kraftfoods"/></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- avon -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/avonn.jpg" alt="avon" id="avon"/></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- telcel -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/telceln.jpg" alt="telcel" id="telcel" /></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- pemex -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/pemexn.jpg" alt="pemex" id="pemex"/></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- tec -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/tec_mtyn.jpg" alt="Tec de monterrey" id="tec_mty" /></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- sixflags -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/sixflagsn.jpg" alt="Sixflags" id="sixflags" /></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- nutrisa -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/nutrisan.jpg" alt="Nutrisa" id="nutrisa" /></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- evenflo -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/evenflo_newn.jpg" alt="Evenflo" id="evenflo_new" /></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- canon -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/canonn.jpg" alt="Canon" id="canon" /></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- phillips -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/phillipsn.jpg" alt="phillips" id="phillips"/></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <!-- ford -->
-                                            <span class="img"><i class="styler_bg_color"></i><img src="img/fhl/fordn.jpg" alt="ford" id="ford"/></span>
-                                            <span class="text styler_hover_border_color">
-                                                <i class="styler_border_color"></i>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="left_arr styler_hover_bg_color"></a>
-                                    <a href="#" class="right_arr styler_hover_bg_color"></a>
-                                </div>
-                            </div>
+                            <!-- team headline -->
+							<div class="col-md-12 col-xs-12 col-sm-12">
+								<div class="caption styler_color">MEET THE TEAM</div>
+							</div>
+							<div class="col-md-12 col-xs-12 col-sm-12">
+								<div class="team">
+									<div class="person">
+										<a href="#" class="photo styler_parent">
+											<!-- team member photo -->
+											<span class="img"><i class="styler_bg_color"></i><img src="img/img7.jpg" alt="" /></span>
+											<span class="text styler_hover_border_color">
+												<i class="styler_border_color"></i>
+												<!-- team member name -->
+												<span class="name">John Doe</span>
+												<!-- team member title -->
+												<span class="desc">President & CEO</span>
+											</span>
+										</a>
+									</div>
+									<div class="person">
+										<a href="#" class="photo styler_parent">
+											<!-- team member photo -->
+											<span class="img"><i class="styler_bg_color"></i><img src="img/img8.jpg" alt="" /></span>
+											<span class="text styler_hover_border_color">
+												<i class="styler_border_color"></i>
+												<!-- team member name -->
+												<span class="name">Cindy Thompson</span>
+												<!-- team member title -->
+												<span class="desc">CFO</span>
+											</span>
+										</a>
+									</div>
+									<div class="person">
+										<a href="#" class="photo styler_parent">
+											<!-- team member photo -->
+											<span class="img"><i class="styler_bg_color"></i><img src="img/img9.jpg" alt="" /></span>
+											<span class="text styler_hover_border_color">
+												<i class="styler_border_color"></i>
+												<!-- team memeber name -->
+												<span class="name">Jane anderson</span>
+												<!-- team member title -->
+												<span class="desc">Art Director</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
                         </div>
-
-                       <!--teitter embebidos-->
-                        <!-- /end clients us-->
-                       
+                        <!-- /end team -->
 
                         <!-- start contact us -->
                         <div id="contact_marker"></div>
-                        <a name="contacto"></a>
                         <div class="mod row">
                             <!-- contact us headline -->
 							<div class="col-md-12 col-xs-12 col-sm-12">
-                            	<div class="caption styler_color">CONTACTANOS</div>
+                            	<div class="caption styler_color">CONTACT US</div>
 							</div>
                             <div class="col-md-8 col-xs-12 col-sm-8">
                                 <!-- contact us form -->
                                 <div class="contact_form">
-                                    <form>
-                                        <input type="text" id="txtNombre" required placeholder="Nombre" />
-                                        <input type="text" id="txtEmail" title="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required placeholder="E-mail" />
-                                        <input type="text" id="txtSubject" required placeholder="Asunto" />
-                                        <textarea required id="txtMensaje" placeholder="Mensaje"></textarea>
-                                        <input type="submit" id="btnEnviarCorreo" value="Enviar" class="styler_bg_color" />							
+                                    <form action="/" method="post">
+                                        <input type="text" placeholder="Name" />
+                                        <input type="text" placeholder="Email Address" />
+                                        <input type="text" placeholder="Subject" />
+                                        <textarea placeholder="Message"></textarea>
+                                        <input type="submit" value="SUBMIT" class="styler_bg_color" />							
                                     </form>
                                 </div>
                             </div>
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="info">
                                     <!-- contact us address headline -->
-                                    <div class="header">DIRECCION</div>
+                                    <div class="header">ADDRESS, PHONE & EMAIL</div>
                                     <div class="text">
                                         <!-- address details -->
-                                        <p>Factor Humano en Línea</p>
-                                        <p> Miguel Ángel de Quevedo número 8 Piso 5</p>
-                                        <p>Colonia Hacienda Guadalupe Chimalistac</p>
-                                        <p>Delegación Álvaro Obregón</p>
-                                        <p>CP.01050 México, Distrito Federal</p>
-                                        <p>Tel: +52 (55)5663-3220</p>
-                                        <p>Email: info@fhenlinea.com</p>
+                                        <p>{biz}strap ONE</p>
+                                        <p>7800 East Mockingbird Lane</p>
+                                        <p>Suite 800</p>
+                                        <p>Dallas, TX 75235</p>
+                                        <p>USA</p>
+                                        <p>p. 214.985.9000</p>
+                                        <p>f. 214.985.9003</p>
+                                        <p>Email: hello@bootsmart.com</p>
                                     </div>
                                 </div>
                                 <div class="info">
                                     <!-- contact us hours of operations headline -->
-                                    <div class="header">HORARIO</div>
+                                    <div class="header">HOURS OF OPERATION</div>
                                     <div class="text">
                                         <!-- hours of operations details -->
-                                        <p>Lunes: 9am a 6pm </p>
-                                        <p>Martes: 9am a 6pm </p>
-                                        <p>Miercoles: 9am a 6pm </p>
-                                        <p>Jueves: 9am a 6pm </p>
-                                        <p>Viernes: 9am a 6pm </p>
-                                        <p>Sábado: Cerrado </p>
-                                        <p>Domingo: Cerrado </p>
+                                        <p>Monday: 8am to 6pm </p>
+                                        <p>Tuesday: 8am to 6pm </p>
+                                        <p>Wednesday: 8am to 6pm </p>
+                                        <p>Thursday: 8am to 6pm </p>
+                                        <p>Friday: 8am to 6pm </p>
+                                        <p>Saturday: Closed </p>
+                                        <p>Sunday: Closed </p>
                                     </div>
                                 </div>
                             </div>
@@ -573,32 +623,19 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-12 col-sm-4">
                             <!-- footer logo here -->
-                            <a href="#" class="logo"><img src="img/fhl/logofooter.png" alt="" /></a>
+                            <a href="#" class="logo"><img src="img/logo_white.png" alt="" /></a>
                             <div class="text">
                                 <!-- footer logo text -->
-                                <p class="txtpersonal">
-                                    Factor Humano en Línea, S.A. de C.V. es una empresa mexicana fundada 
-                                    en 1995, con sede y clientes en 15 países de Iberoamérica, concebida como 
-                                    una organización de servicios y consultoría en tecnologías de información,
-                                    con orientación total a ofrecer soluciones para las áreas de Factor Humano.
-                                </p>
+                                <p>Curabitur sodales ligula in libero. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Pellentesque nibh. </p>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12 col-sm-4">
                             <div class="text">
                                 <!-- disclaimer headline -->
-                               
+                                <div class="header">DISCLAIMER</div>
                                 <!-- disclaimer text -->
-                                <p class="txtpersonal">
-                                    Mediante nuestras herramientas podrá realizar: selección de personal,
-                                    reclutamiento, capacitación, plan de vida y carrera, evaluación de
-                                    competencias laborales y medición de clima laboral.
-                                </p>
-                                <p class="txtpersonal">
-                                    La misión de nuestra empresa es ofrecer un servicio logrando un nivel de atención
-                                    de clase mundial, así como desarrollar, diseñar y comercializar sistemas informáticos
-                                    integrales para diversos fines.
-                                </p>
+                                <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Pellentesque nibh.</p>
+                                <p>Curabitur sodales ligula in libero. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Pellentesque nibh. </p>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12 col-sm-4">
@@ -606,15 +643,13 @@
                                 <!-- newsletter headline -->
                                 <div class="header">NEWSLETTER</div>
                                 <!-- newsletter text -->
-                                <p>
-                                    Suscribete a nuestro boletín y obtén todas las novedades de nuestros sistemas.
-                                </p>
+                                <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
                             </div>
                             <!-- newsletter form -->
                             <div class="subscribe">
                                 <form action="/" method="post">
-                                    <input type="text" placeholder="E-mail" />
-                                    <input type="submit" value="Enviar" class="styler_bg_color" />
+                                    <input type="text" placeholder="Email Address" />
+                                    <input type="submit" value="GO" class="styler_bg_color" />
                                 </form>
                             </div>
                         </div>
@@ -625,184 +660,13 @@
                 <div class="container">
                     <div class="row">
                         <!-- enter copyright information here -->
-                        <div class="copyrights">© Copyright  <b>FHL 2016</b>. All rights reserved.</div>
+                        <div class="copyrights">© Copyright <a href="http://www.themeleaf.com" title="twitter bootstrap and wordpress themes">ThemeLeaf</a> 2013. All rights reserved.</div>
                     </div>
                 </div>
             </div>
         </div>
 
-         <!--Inicio Modal psicosoft-->
-        <div class="modal fade" id="psicosoft" tabindex="-1" role="dialog" aria-labelledby="Psicosoft">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="psiosoft">Psicosoft</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/fhl/grpsicosoft.jpg" class="img-responsive" />
-                                <hr /><br />
-                                <p class="txtmodal">
-                                    Fue creado para satisfacer las necesidades de las empresas en la
-                                    selección, capacitación y promoción de su personal al contar con
-                                    20 pruebas diseñadas para medir: adaptación de la persona a un puesto
-                                    de trabajo, la inteligencia, los intereses, la personalidad, etc.
-                                </p><br />
-                                <p class="txtmodal">
-                                    Donde cada uno de los test incluye una información bastante
-                                    especifica. Las personas pueden aplicar sus pruebas desde a través
-                                    de una computadora que tenga instalado el sistema o hacerlo con
-                                    lápiz y papel para posteriormente introducir solo las respuestas
-                                    dentro de PsicoSoft, una vez que terminen su aplicación, los
-                                    resultados estarán disponibles para ser consultados por el
-                                    administrador de la información desde cualquier parte y a cualquier
-                                    hora siempre y cuando tenga una computadora con el sistema instalado
-                                    y compararlo contra los perfiles de puesto que hayan sido creados previamente.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Fin Modal Psicosoft-->
 
-        <!--Inicio Modal psicoweb-->
-        <div class="modal fade" id="psicoweb" tabindex="-1" role="dialog" aria-labelledby="psicoweb">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="psicoweb">Psicoweb</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/fhl/grpsicoweb.png" class="img-responsive" />
-                                <hr /><br />
-                                <p class="txtmodal">
-                                    Fue creado para satisfacer las necesidades de las empresas en la selección, 
-                                capacitación y promoción de su personal al contar con 20 pruebas diseñadas para 
-                                medir: adaptación de la persona a un puesto de trabajo, la inteligencia, los intereses, 
-                                la personalidad, etc.
-                                </p>
-                                <p class="txtmodal">
-                                    Donde cada uno de los test incluye una información bastante especifica.Las personas 
-                                    pueden aplicar sus pruebas desde cualquier lugar donde se cuente con conexión a Internet 
-                                    y una vez que terminen su aplicación, los resultados estarán disponibles para ser 
-                                    consultados por el administrador de la información desde cualquier parte y a cualquier 
-                                    hora siempre y cuando tenga una computadora con conexión a Internet y compararlo contra 
-                                    los perfiles de puesto que hayan sido creados previamente.
-                                </p>
-                                <p class="txtmodal">
-                                    Puede utilizar PsicoWeb desde cualquier lugar del mundo donde cuente con una conexión a 
-                                    Internet. No depende de su área de tecnologías de la información ya que no requiere ninguna 
-                                    configuración especial en su computadora.
-                                </p>
-</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Fin Modal Psicoweb-->
-
-
-        <!--Inicio Modal spc-->
-        <div class="modal fade" id="spc" tabindex="-1" role="dialog" aria-labelledby="spc">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="spc">SPC</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/fhl/grlpc.png" class="img-responsive" />
-                                <hr /><br />
-                                <p class="txtmodal">
-                                    Con la prueba Líder por Competencias podrá centrarse en las características que definen el liderazgo y así poder detectar, desde el comienzo, a las personas que las poseen para poder fomentarlas (o desarrollarlas) a lo largo de su carrera profesional.
-                                </p>
-                                <p class="txtmodal">
-                                    LPC contempla 150 competencias laborales, de esta manera, con diferentes grados de responsabilidad y complejidad, se establecieron cuatro niveles a evaluar: ejecutivo, intermedio, inicial, además cuenta con competencias corporativas, de conocimientos, E- competences.
-                                </p>
-                                <p class="txtmodal">
-                                    El único sistema con el que usted podrá definir las competencias que desee evaluar, para cada uno de sus puestos con la finalidad de mostrar compatibilidad puesto-entrevista-persona.
-                                    <br />
-                                    Reporte ejecutivo de fácil comprensión con módulo de recomendaciones para mejora del candidato. Los resultados llegarán de forma automática a su correo electrónico.
-                                    <br />
-                                    Nuestro sistema ofrece un módulo de entrevistas por competencias.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Fin Modal spc-->
-
-        <!--Inicio Modal Conociweb-->
-        <div class="modal fade" id="conociweb" tabindex="-1" role="dialog" aria-labelledby="conociweb">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="conociweb">Conociweb</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/fhl/grconociweb.png" class="img-responsive" />
-                                <hr /><br />
-                                <p class="txtmodal">
-                                    Este sistema de pruebas automatizadas le ayuda de una manera ágil y económica en esta fase del proceso de contratación o promoción de su personal, aplicando las pruebas directamente en la computadora o aplicándolas en papel y siendo alimentada la información al sistema. Con pruebas de Cultura General, Inglés e Informática.
-                                </p>
-                                <p class="txtmodal">
-                                    Esta herramienta también nos ayudará en caso que el personal de reclutamiento y selección de personal no conozca el idioma inglés o no conozca terminología de informática.
-                                </p>
-                                <p class="txtmodal">
-                                    Con este sistema usted podrá conocer el nivel de conocimientos que el candidato tenga en algunas de las materias como son, Cultura General, Inglés e Informática, además ConociWeb le permite crear sus propios test de conocimientos, también puede imprimir, los tests para que una vez que el candidato los responda, usted introduzca las respuestas en el sistema.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Fin Modal Conociweb-->
-       
-        <!--Inicio Modal ecoclima-->
-        <div class="modal fade" id="ecoclima" tabindex="-1" role="dialog" aria-labelledby="ecoclima">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="ecoclima">Eco Clima Laboral</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/fhl/rgeco.png" class="img-responsive" />
-                                <hr /><br />
-                                <p class="txtmodal">
-                                    Eco Clima Laboral le permite evaluar el ambiente de trabajo de su organización y como esta se refleja en la eficiencia y los resultados de los equipos de trabajo.
-                                    <br />
-                                    ECO Clima Laboral utiliza tecnología de punta especialmente diseñada para evaluar el ambiente de trabajo que hay en una organización y cómo éste se refleja en la eficiencia y los resultados de los diversos equipos de trabajo.
-                                </p>
-                                <p class="txtmodal">
-                                    Eco Clima Laboral le ayudará a conocer la situación actual de su organización, para poner en marcha acciones de mejora, en aquellos factores en los que se detecten situaciones desfavorables, como la falta de trabajo en equipo, falta de incentivos, capacitación y atención al cliente, entre otros. Este instrumento es una potente palanca para poder actuar de forma eficaz y oportuna en la mejora del clima laboral.
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Fin Modal ecoclima-->
         <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -814,9 +678,6 @@
         <script type="text/javascript" src="js/jquery.easy-pie-chart.js"></script>
         <script type="text/javascript" src="js/library.js"></script>
         <script type="text/javascript" src="js/function.js"></script>
-        <script type="text/javascript" src="js/correo.js"></script>  
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <script src="js/myjs.js"></script>
-       
+
     </body>
 </html>

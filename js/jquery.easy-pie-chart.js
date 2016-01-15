@@ -31,7 +31,6 @@ Thanks to Philip Thrasher for the jquery plugin boilerplate for coffee script
         var percent;
         _this.options = $.extend({}, $.easyPieChart.defaultOptions, options);
         percent = parseInt(_this.$el.data('percent'), 10);
-       
         _this.percentage = 0;
         _this.canvas = $("<canvas width='" + _this.options.size + "' height='" + _this.options.size + "'></canvas>").get(0);
         _this.$el.append(_this.canvas);
@@ -121,17 +120,14 @@ Thanks to Philip Thrasher for the jquery plugin boilerplate for coffee script
         _this.ctx.stroke();
         return _this.ctx.restore();
       };
-      animateLine = function (from, to) {
-          
+      animateLine = function(from, to) {
         var currentStep, fps, steps;
-        fps = 46;
+        fps = 30;
         steps = fps * _this.options.animate / 1000;
-     
         currentStep = 0;
         _this.options.onStart.call(_this);
         _this.percentage = to;
         if (_this.animation) {
-          
           clearInterval(_this.animation);
           _this.animation = false;
         }
@@ -139,8 +135,7 @@ Thanks to Philip Thrasher for the jquery plugin boilerplate for coffee script
           _this.ctx.clearRect(-_this.options.size / 2, -_this.options.size / 2, _this.options.size, _this.options.size);
           renderBackground.call(_this);
           drawLine.call(_this, [easeInOutQuad(currentStep, from, to - from, steps)]);
-             $(el).find('span').html(currentStep + '%');
-             
+		  $(el).find('span').html(currentStep + '%');
 		  $(el).find('span').css('color', _this.options.barColor);
           currentStep++;
           if ((currentStep / steps) > 1) {

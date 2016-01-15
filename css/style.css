@@ -499,19 +499,11 @@ ul, ol {
 }
 #wrapper .mod .carousel ul {
     margin:0;}
-#wrapper .mod .carousel ul li  {
+#wrapper .mod .carousel ul li {
     list-style:none;
     margin:0;
     float:left;
     width:313px;
-	padding-left:20px;
-}
- /**adaptación a clientes*/
- #wrapper .mod .carousel .cliente li{
-    list-style:none;
-    margin:0;
-    float:left;
-    width:180px!important;
 	padding-left:20px;
 }
 .photo {
@@ -656,7 +648,7 @@ ul, ol {
     margin-bottom:20px;
 }
 #wrapper .mod .article p {
-    font-size:13px;
+    font-size:12px;
     line-height:18px;
     color:#333;
     margin-bottom:18px;
@@ -812,7 +804,7 @@ form {
 }
 #footer .top .text p {
     margin-bottom:20px;
-    font-size:13px;
+    font-size:12px;
     line-height:18px;
 }
 #footer .top .text .header {
@@ -1596,60 +1588,4 @@ form {
 }
 #top_menu .dropdown-menu > li > a {
 	padding:6px 20px;
-}
-
-.txtpersonal{
-    text-align:justify;
-}
-
-.txtslider{
-    color: #FFF;
-}
-.txtslider2{
-    color: #003f6e;
-}
-.txtmodal{
-    text-align:justify;
-    margin: 10px;
-    
-}
-.modal-backdrop {
-   background-color: #FFF!important;
-   opacity: 0.5!important;
-}    
-/*#####################
-Estilo adicional requerido para formato de Twitts carousel
-######################*/
-
-.carousel-inner .item img {
-width: 100%;
-height: 100%;
-}
-
-.item .thumbnail {
-     margin-bottom: 0;
-}
-
-.carousel-control.left, .carousel-control.right {
-background-image: none !important;
-}
-
-.carousel-control {
-background: #ddd;
-color: #999;
-padding: 4px 0;
-width: 26px;
-top: auto;
-left: auto;
-bottom: 0;
-opacity: 1;
-text-shadow: none;
-}
-
-.carousel-control.right {
-right: 10px;
-}
-
-.carousel-control.left {
- right: 40px;
 }
