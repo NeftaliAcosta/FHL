@@ -1,44 +1,9 @@
 ﻿$(document).ready(function () {
-
-    var pathname = window.location.pathname;
-    alert("Path:"+ pathname);
     var URLdomain = window.location;
-    alert("URL: " + URLdomain);
     dom = window.location.host;
-
     doma = 'http://' + dom + '/';
-    alert('Dominio:'+ doma);
-
-
     if (URLdomain==doma){
-        alert("Es el home");
-    }
-    else {
-        alert("No es home");
-    }
-        
-    /*Evitar que cargue modal de banderas y ocultarlo*/
-    function $_GET(param) {
-        url = document.URL;
-        url = String(url.match(/\?+.+/));
-        url = url.replace("?", "");
-        url = url.split("&");
-        x = 0;
-        while (x < url.length) {
-            p = url[x].split("=");
-            if (p[0] == param) {
-                return decodeURIComponent(p[1]);
-            }
-            x++;
-        }
-    }
-    if (($_GET("flags") == 0)) {
-        //    /*No invoco el modal de las banderas*/
-        $('#flags').modal('hide');
-    }
-    else {
-        /*invoco el  modal*/
-        var URLactual = jQuery(location).attr('href');
+        /*Se detecta URL limpia y cargo el modal de paises*/
         var efh = 'http://efh.com.mx/';
         var mx = 'http://efh.mx/';
         var corp = 'http://efhcorporativo.com/';
@@ -49,17 +14,17 @@
         var fhx = 'http://www.fhenlinea.com/';
         var ht = 'http://localhost:58702/';
         $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
-        if ((fh == URLactual) || (fhx == URLactual) || (ht == URLactual) || (efh == URLactual) || (mx == URLactual) || (corp == URLactual) || (efhx == URLactual) || (mxx == URLactual) || (corpx == URLactual)) {
-           
+        if ((fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
+
             $('.mflags a').mouseover(function () {
                 country = $(this).attr("id");
                 param = '?flags=0';
-            if (country == 'http://efh.mx') {
-                $("a").prop("href", URLactual + param);
-            }
-            else {
-                $("a").prop("href", country + param);
-            }
+                if (country == 'http://efh.mx') {
+                    $("a").prop("href", URLdomain + param);
+                }
+                else {
+                    $("a").prop("href", country + param);
+                }
             })
         }
         else {
@@ -70,10 +35,16 @@
                 $("a").prop("href", country + param);
             })
         }
+        
     }
-    /*Fin Evitar que cargue modal de banderas y ocultarlo*/
+    else {
+        /*No invoco el modal de las banderas*/
+        $('#flags').modal('hide');
+    }
 
-    
+
+    var URLsearch = window.location.search;
+    alert(URLsearch);
 
 
     /*Carga el efecto carousel al iniciar el sitio
