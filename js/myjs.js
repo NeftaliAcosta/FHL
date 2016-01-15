@@ -85,7 +85,10 @@
     });
 
 
-    $('.carousel clientes').carousel('show')
+    $('.carousel clientes').carousel('show');
+
+ 
+    
   
 });/*Fin Document ready*//*=============================================*/
 
@@ -130,3 +133,10 @@ $('.close').click(function () {
 });
 
 
+$("#btnCliente").on('click', function () {
+    if ($("#btnCliente").text() == "Menos clientes") {
+        $("#btnCliente").text("Más clientes");
+    } else {
+        $("#btnCliente").text("Menos clientes");
+    }
+});
