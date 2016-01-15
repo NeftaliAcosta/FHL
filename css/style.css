@@ -1676,6 +1676,9 @@ li spanl .desc{
         width: 20%;
     }
 }
+h4, .h4 {
+    font-size: 14px;
+}
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
