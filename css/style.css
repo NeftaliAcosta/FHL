@@ -1660,7 +1660,7 @@ li spanl .desc{
     width: 100%;
     display: inline-block;
     position: relative;
-   
+    box-shadow:none!important;
     overflow: hidden;
     margin-bottom: 20px;
 }
