@@ -1719,10 +1719,18 @@ h4, .h4 {
 .detalles{
     background-color:#cf0a2b;
     color:#fff;
+    border-color:#000;
+    
+}
+.detalles p{
+     margin: 5px;
 }
 
 .contacto{
     margin: 10px;
+}
+.detalles span{
+    font-weight:bold;
 }
 
 

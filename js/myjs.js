@@ -161,7 +161,7 @@ $("#btnCliente").on('click', function () {
 
 /*Llenado de detalles de contacto en banderas*/
 var ventas = {
-    México: {
+    Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
         Country: 'Raúl Ramallo',
         tel: '+52 (55)5663-3220',
@@ -268,12 +268,8 @@ var ventas = {
 
 $('.ventas .flag-wrapper div').click(function () {
     var pais = $(this).attr("id");
-    $('.detalles').html("<p class='contacto'> <b>" +
-            ventas.México.RFC + "</b>" +
-           " Country Manager: "+ ventas[pais].Country +
-           " Ventas: " + ventas[pais].tel +
-           " Correo: " + ventas[pais].mail +
-           " Web: " + ventas[pais].web +
-            "</p>");
+    var mypais = $(this).attr("title");
+    $('.detalles #rfc').html("<p><span>" + ventas.México.RFC + "</span></p>");
+    $('.detalles #Country').html("<p><span>País: </span>" + mypais + "</p>");
    
 }); 
