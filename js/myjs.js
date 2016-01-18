@@ -140,3 +140,140 @@ $("#btnCliente").on('click', function () {
         $("#btnCliente").text("Menos clientes");
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Llenado de detalles de contacto en banderas*/
+var ventas = {
+    México: {
+        RFC: 'Excelencia en Factor Humano S.A de C.V.',
+        Country: 'Raúl Ramallo',
+        tel: '+52 (55)5663-3220',
+        mail: 'info@efhcorporativo.com',
+        web: 'www.efh.mx'
+    },
+    Argentina: {
+        Country: '',
+        Direccion:'',
+        tel: '',
+        mail: 'info@efhargentina.com',
+        web: 'www.efhargentina.com'
+    },
+    Bolivia: {
+        Country: 'Raúl Ramallo',
+        Direccion:'Av. Sanchez Lima, Edificio Tango, piso 10, Oficina 1001. La Paz, Bolivia',
+        tel: '+591 77556161',
+        mail: 'info@efhbolivia.com',
+        web: 'www.efhBolivia.com'
+    },
+    Chile: {
+        Country: 'David Segovia ',
+        Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile, Chile.',
+        tel: '+562 2753 3604 /+569 4245 1987',
+        mail: 'info@efhchile.com',
+        web: 'www.efhchile.com'
+    },
+    Colombia: {
+        Country: 'Alejandro García',
+        Direccion: 'Calle 20 No.82-52 Oficina 402, Centro Empresarial Hayuelos, Bogotá D.C.',
+        tel: '+57 1 7041489, +57 1 7041487. Móvil:+ 57 31 64 73 89 81',
+        mail: 'info@efhcolombia.com',
+        web: 'www.efhcolombia.com'
+    },
+    CostaRica: {
+        Country: 'Raúl Ramallo ',
+        Direccion: '100 mts sur del Banco Nacional de Costa Rica, Curridabat, San José, Costa Rica',
+        tel: '+506 4030-7764, +506 4034-3947. Móvil: +506 8751-7643',
+        mail: 'info@efhcostarica.com',
+        web: 'www.efhcostarica.com'
+    },
+    Ecuador: {
+        Country: 'Xavier Verdesoto Vallejo',
+        Direccion: 'Italia N31-54 y Vancouver, Quito, Ecuador.',
+        tel: '+5932 6007500, 6007502, 6007503. Móvil: +593 099515200',
+        mail: 'info@efhecuador.com',
+        web: 'www.efhecuador.com'
+    },
+    Salvador: {
+        Country: 'Lic. Angela G. Escobar',
+        Direccion: '13 Calle Poniente No. 4344, Col. Escalón, San Salvador, El Salvador, C.A.',
+        tel: '+503 2264 5961/62/63 ',
+        mail: 'info@efhelsalvador.com',
+        web: 'www.efhelsalvador.com'
+    },
+    Guatemala: {
+        Country: 'Diana Altamirano',
+        Direccion: 'Guatemala, Centroamérica',
+        tel: '+502 5528 22 11. Móvil: +502 5179-8516 ',
+        mail: 'info@efhguatemala.com',
+        web: 'www.efhguatemala.com'
+    },
+    Honduras: {
+        Country: 'Ing. Gustavo Molina',
+        Direccion: '2a. calle No. 4101 Col. Florencia Sur Tegucigalpa, Honduras, CA',
+        tel: '+504 2232 0013, +504 9963 4879',
+        mail: 'info@efhhonduras.com',
+        web: 'www.efhhonduras.com'
+    },
+    Nicaragua: {
+        Country: 'Sandra Lira',
+        Direccion: 'Managua, Canal 2 TV, 2 Cuadras Norte 20 varas Oeste, Bolonia',
+        tel: '+505 2254 5153, +505 2266 6776',
+        mail: 'info@efhnicaragua.com',
+        web: 'www.efhnicaragua.com'
+    },
+    Panama: {
+        Country: 'Jorge Isaac Pitty M.',
+        Direccion: 'Calle 8 La Rivera Don Bosco, Local 57-E Ciudad de Panamá, Panamá.',
+        tel: '+00 507 293 6903. Móvil: +00 507 6680 711',
+        mail: 'info@efhpanama.com',
+        web: 'www.efhpanama.com'
+    },
+    Peru: {
+        Country: 'Enrique A. Queija Siguas',
+        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima, Perú.',
+        tel: '+511 625 9747',
+        mail: 'info@efhperu.com',
+        web: 'www.efhperu.com'
+    },
+    Rdominicana: {
+        Country: 'Luisa Maleno',
+        Direccion: 'Calle Plaza de la Cultura No. 26, El Millón, Sto. Domingo, República Dominicana.',
+        tel: '+809-482-2657',
+        mail: 'lmaleno@efhcaribe.com',
+        web: 'www.efhcaribe.com'
+    },
+};
+
+
+
+
+
+
+$('.ventas .flag-wrapper div').click(function () {
+    var pais = $(this).attr("id");
+    $('.detalles').html("<p class='contacto'> <b>" +
+            ventas.México.RFC + "</b>" +
+           " Country Manager: "+ ventas[pais].Country +
+           " Ventas: " + ventas[pais].tel +
+           " Correo: " + ventas[pais].mail +
+           " Web: " + ventas[pais].web +
+            "</p>");
+   
+}); 

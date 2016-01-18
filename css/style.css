@@ -1708,6 +1708,24 @@ h4, .h4 {
 }
 
 
+
+
+
+@media screen and (min-width: 768px) {
+   .ventas .col-lg-1 {
+        width: 7%;
+    }
+}
+.detalles{
+    background-color:#cf0a2b;
+    color:#fff;
+}
+
+.contacto{
+    margin: 10px;
+}
+
+
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
