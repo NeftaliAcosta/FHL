@@ -1797,3 +1797,28 @@ right: 10px;
  right: 40px;
 }
 /*######################*/
+
+
+/*Fixed top bar*/
+@media (max-width: 1500px) {
+            #gris {
+                height: 54px;
+            }
+
+            .social_links {
+                margin-top: 10px;
+            }
+            .phone{
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+             .social_links {
+                margin-top: 0px;
+            }
+            .phone{
+                margin-top: 0px;
+            }
+        }
+        /*Fixed top bar*/

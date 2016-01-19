@@ -134,6 +134,76 @@ $(document).ready(function () {
 
 
 
+    /*Carga de contenedor de puto de venta*/
+    if ($('.ventas').is(':hidden')) {
+        if (MX = true) {
+            pais = "Mexico";
+         
+        }
+        if ((URLdomain == 'http://www.efhargentina.com/') || (URLdomain == 'http://efhargentina.com/')) {
+            pais = "Argentina";
+        }
+
+        if ((URLdomain == 'http://www.efhbolivia.com/') || (URLdomain == 'http://efhvolivia.com/')) {
+            pais = "Bolivia";
+        }
+        if ((URLdomain == 'http://www.efhchile.com/') || (URLdomain == 'http://efhchile.com/')) {
+            pais = "Chile";
+        }
+        if ((URLdomain == 'http://www.efhcolombia.com/') || (URLdomain == 'http://efhcolombia.com/')) {
+            pais = "Colombia";
+        }
+        if ((URLdomain == 'http://www.efhcostarica.com/') || (URLdomain == 'http://efhcostarica.com/')) {
+            pais = "CostaRica";
+        }
+        if ((URLdomain == 'http://www.efhecuador.com/') || (URLdomain == 'http://efhecuador.com/')) {
+            pais = "Ecuador";
+        }
+        if ((URLdomain == 'http://www.efhelsalvador.com/') || (URLdomain == 'http://efhelsalvador.com/')) {
+            pais = "Ecuador";
+        }
+        if ((URLdomain == 'http://www.efhguatemala.com/') || (URLdomain == 'http://efhguatemala.com/')) {
+            pais = "Guatemala";
+        }
+        if ((URLdomain == 'http://www.efhhonduras.com/') || (URLdomain == 'http://efhhonduras.com/')) {
+            pais = "Honduras";
+        }
+        if ((URLdomain == 'http://www.efhnicaragua.com/') || (URLdomain == 'http://efhnicaragua.com/')) {
+            pais = "Nicaragua";
+        }
+        if ((URLdomain == 'http://www.efhnicaragua.com/') || (URLdomain == 'http://efhnicaragua.com/')) {
+            pais = "Nicaragua";
+        }
+        if ((URLdomain == 'http://www.efhpanama.com/') || (URLdomain == 'http://efhpanama.com/')) {
+            pais = "Panama";
+        }
+        if ((URLdomain == 'http://www.efhcaribe.com/') || (URLdomain == 'http://efhcaribe.com/')) {
+            pais = "Rdominicana";
+        }
+
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span>" + pais + "</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas[pais].Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas[pais].tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+    }
+    else {
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span> México</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas.Mexico.Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas.Mexico.tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas.Mexico.Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas.Mexico.mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas.Mexico.web + "</p>");
+    }
+    /*Fin del div detalles de puntos de venta*/
+
+
+
 
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
@@ -201,6 +271,11 @@ $("#btnCliente").on('click', function () {
     }
 });
 
+<<<<<<< HEAD
+=======
+
+/*Llenado de detalles de contacto en banderas*/
+>>>>>>> refs/remotes/origin/master
 var ventas = {
     Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
@@ -229,7 +304,11 @@ var ventas = {
     },
     Chile: {
         Country: 'David Segovia ',
+<<<<<<< HEAD
         Direccion: 'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
+=======
+        Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
+>>>>>>> refs/remotes/origin/master
         tel: '+562 2753 3604 /+569 4245 1987',
         Movil: '',
         mail: 'info@efhchile.com',
@@ -314,8 +393,11 @@ var ventas = {
         web: 'www.efhcaribe.com'
     },
 };
+<<<<<<< HEAD
 
 /*Llenado de detalles de contacto en banderas*/
+=======
+>>>>>>> refs/remotes/origin/master
 $('.ventas .flag-wrapper div').click(function () {
     var pais = $(this).attr("id");
     var mypais = $(this).attr("title");
@@ -327,6 +409,7 @@ $('.ventas .flag-wrapper div').click(function () {
     $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
     $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
     $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+<<<<<<< HEAD
 });
 
 
@@ -335,3 +418,6 @@ function detectar_pais(pais) {
     xurl = window.location
     alert(xurl)
     }
+=======
+}); 
+>>>>>>> refs/remotes/origin/master
