@@ -16,19 +16,6 @@ $(document).ready(function () {
     var ht = 'http://localhost:52409/';
     /*Se detecta URL limpia y cargo el modal de paises*/
     if (URLdomain == doma) {
-<<<<<<< HEAD
-=======
-        /*Se detecta URL limpia y cargo el modal de paises*/
-        var efh = 'http://efh.com.mx/';
-        var mx = 'http://efh.mx/';
-        var corp = 'http://efhcorporativo.com/';
-        var efhx = 'http://www.efh.com.mx/';
-        var mxx = 'http://www.efh.mx/';
-        var corpx = 'http://www.efhcorporativo.com/';
-        var fh = 'http://fhenlinea.com/';
-        var fhx = 'http://www.fhenlinea.com/';
-        var ht = 'http://localhost:58702/';
->>>>>>> parent of 8709d9f... Versión 1.6.2
         $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
         if ((fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
             var mx = true;
@@ -92,7 +79,6 @@ $(document).ready(function () {
     }
     /*Fin de invocación de modales*/
 
-<<<<<<< HEAD
 
     /*Carga del div detalles de puntos de venta*/
     
@@ -112,6 +98,15 @@ $(document).ready(function () {
         }
         if ((URLdomain == 'http://www.efhchile.com/') || (URLdomain == 'http://efhchile.com/')) {
             pais = "Chile";
+        }
+        if ((URLdomain == 'http://www.efhcolombia.com/') || (URLdomain == 'http://efhcolombia.com/')) {
+            pais = "Colombia";
+        }
+        if ((URLdomain == 'http://www.efhcostarica.com/') || (URLdomain == 'http://efhcostarica.com/')) {
+            pais = "CostaRica";
+        }
+        if ((URLdomain == 'http://www.efhecuador.com/') || (URLdomain == 'http://efhecuador.com/')) {
+            pais = "Ecuador";
         }
 
         $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
@@ -139,8 +134,6 @@ $(document).ready(function () {
 
 
 
-=======
->>>>>>> parent of 8709d9f... Versión 1.6.2
 
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
@@ -211,7 +204,8 @@ $("#btnCliente").on('click', function () {
 var ventas = {
     Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
-        Country: 'Raúl Ramallo',
+        Direccion: 'Miguel Ángel de Quevedo número 8 Piso 5, Colonia Hacienda Guadalupe Chimalistac, Delegación Álvaro Obregón, 01050 México, Distrito Federal.',
+        Country: '',
         tel: '+52 (55)5663-3220',
         Movil: '',
         mail: 'info@efhcorporativo.com',
@@ -235,11 +229,7 @@ var ventas = {
     },
     Chile: {
         Country: 'David Segovia ',
-<<<<<<< HEAD
         Direccion: 'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
-=======
-        Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile, Chile.',
->>>>>>> parent of 8709d9f... Versión 1.6.2
         tel: '+562 2753 3604 /+569 4245 1987',
         Movil: '',
         mail: 'info@efhchile.com',
@@ -272,6 +262,7 @@ var ventas = {
     Salvador: {
         Country: 'Lic. Angela G. Escobar',
         Direccion: '13 Calle Poniente No. 4344, Col. Escalón, San Salvador, El Salvador, C.A.',
+        Movil: '',
         tel: '+503 2264 5961/62/63',
         mail: 'info@efhelsalvador.com',
         web: 'www.efhelsalvador.com'
@@ -332,7 +323,6 @@ $('.ventas .flag-wrapper div').click(function () {
     $('.detalles #Country').html("<p><span>País: </span>" + mypais + "</p>");
     $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
     $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas[pais].Direccion + "</p>");
-<<<<<<< HEAD
     $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas[pais].tel + "</p>");
     $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
     $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
@@ -345,8 +335,3 @@ function detectar_pais(pais) {
     xurl = window.location
     alert(xurl)
     }
-=======
-    $('.detalles #Ventas').html("<p><span>Dirección: </span>" + ventas[pais].tel + "</p>");
-    $('.detalles #Movil').html("<p><span>Dirección: </span>" + ventas[pais].Movil + "</p>");
-}); 
->>>>>>> parent of 8709d9f... Versión 1.6.2
