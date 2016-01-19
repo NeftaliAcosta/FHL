@@ -1,21 +1,24 @@
-﻿$(document).ready(function () {
+﻿
+$(document).ready(function () {
+  
+  
     var URLdomain = window.location;
     dom = window.location.host;
     doma = 'http://' + dom + '/';
+    var efh = 'http://efh.com.mx/';
+    var mx = 'http://efh.mx/';
+    var corp = 'http://efhcorporativo.com/';
+    var efhx = 'http://www.efh.com.mx/';
+    var mxx = 'http://www.efh.mx/';
+    var corpx = 'http://www.efhcorporativo.com/';
+    var fh = 'http://fhenlinea.com/';
+    var fhx = 'http://www.fhenlinea.com/';
+    var ht = 'http://localhost:52409/';
+    /*Se detecta URL limpia y cargo el modal de paises*/
     if (URLdomain == doma) {
-        /*Se detecta URL limpia y cargo el modal de paises*/
-        var efh = 'http://efh.com.mx/';
-        var mx = 'http://efh.mx/';
-        var corp = 'http://efhcorporativo.com/';
-        var efhx = 'http://www.efh.com.mx/';
-        var mxx = 'http://www.efh.mx/';
-        var corpx = 'http://www.efhcorporativo.com/';
-        var fh = 'http://fhenlinea.com/';
-        var fhx = 'http://www.fhenlinea.com/';
-        var ht = 'http://localhost:52409/';
         $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
         if ((fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
-
+            var mx = true;
             $('.mflags a').mouseover(function () {
                 country = $(this).attr("id");
                 param = '?flags=0';
@@ -34,6 +37,7 @@
                 country = $(this).attr("id");
                 $("a").prop("href", country + param);
             })
+            mx = false;
         }
 
     }
@@ -73,17 +77,51 @@
     else if (($_GET("producto") == 'ecoclima')) {
         $('#ecoclima').modal('show')
     }
+    /*Fin de invocación de modales*/
 
- 
+
+    /*Carga del div detalles de puntos de venta*/
     
-    $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
-    $('.detalles #Country').html("<p><span>País: </span> México</p>");
-    $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
-    $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas.Mexico.Direccion + "</p>");
-    $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas.Mexico.tel + "</p>");
-    $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas.Mexico.Movil + "</p>");
-    $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas.Mexico.mail + "</p>");
-    $('.detalles #Web').html("<p><span>Web: </span>" + ventas.Mexico.web + "</p>");
+    
+    
+
+    if ($('.ventas').is(':hidden')) {
+        if (MX = true) {
+            pais = "Mexico";
+        }
+        if ((URLdomain == 'http://www.efhargentina.com/') || (URLdomain=='http://efhargentina.com/')) {
+            pais = "Argentina";
+        }
+
+        if ((URLdomain == 'http://www.efhbolivia.com/') || (URLdomain == 'http://efhvolivia.com/')) {
+            pais = "Bolivia";
+        }
+        if ((URLdomain == 'http://www.efhchile.com/') || (URLdomain == 'http://efhchile.com/')) {
+            pais = "Chile";
+        }
+
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span>"+pais+ "</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas[pais].Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas[pais].tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+    }
+    else{
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span> México</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas.Mexico.Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas.Mexico.tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas.Mexico.Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas.Mexico.mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas.Mexico.web + "</p>");
+    }
+    /*Fin del div detalles de puntos de venta*/
+    
+   
 
 
 
@@ -154,25 +192,6 @@ $("#btnCliente").on('click', function () {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Llenado de detalles de contacto en banderas*/
 var ventas = {
     Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
@@ -185,7 +204,7 @@ var ventas = {
     },
     Argentina: {
         Country: '',
-        Direccion:'',
+        Direccion: '',
         tel: '',
         Movil: '',
         mail: 'info@efhargentina.com',
@@ -193,7 +212,7 @@ var ventas = {
     },
     Bolivia: {
         Country: 'Raúl Ramallo',
-        Direccion:'Av. Sanchez Lima, Edificio Tango, piso 10, Oficina 1001. La Paz, Bolivia',
+        Direccion: 'Av. Sanchez Lima, Edificio Tango, piso 10, Oficina 1001. La Paz, Bolivia',
         tel: '+591 77556161',
         Movil: '',
         mail: 'info@efhbolivia.com',
@@ -201,7 +220,7 @@ var ventas = {
     },
     Chile: {
         Country: 'David Segovia ',
-        Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
+        Direccion: 'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
         tel: '+562 2753 3604 /+569 4245 1987',
         Movil: '',
         mail: 'info@efhchile.com',
@@ -211,7 +230,7 @@ var ventas = {
         Country: 'Alejandro García',
         Direccion: 'Calle 20 No.82-52 Oficina 402, Centro Empresarial Hayuelos, Bogotá D.C.',
         tel: '+57 1 7041489, +57 1 7041487.',
-        Movil:'+57 31 64 73 89 81',
+        Movil: '+57 31 64 73 89 81',
         mail: 'info@efhcolombia.com',
         web: 'www.efhcolombia.com'
     },
@@ -224,7 +243,7 @@ var ventas = {
         web: 'www.efhcostarica.com'
     },
     Ecuador: {
-        Country: 'Xavier Verdesoto Vallejo',
+        Country: 'Xavier Verdesoto V.',
         Direccion: 'Italia N31-54 y Vancouver, Quito, Ecuador.',
         tel: '+5932 6007500, 6007502, 6007503.',
         Movil: '+593 099515200',
@@ -265,13 +284,13 @@ var ventas = {
         Country: 'Jorge Isaac Pitty M.',
         Direccion: 'Calle 8 La Rivera Don Bosco, Local 57-E Ciudad de Panamá, Panamá.',
         tel: '+00 507 293 6903.',
-        Movil:'+00 507 6680 711',
+        Movil: '+00 507 6680 711',
         mail: 'info@efhpanama.com',
         web: 'www.efhpanama.com'
     },
     Peru: {
-        Country: 'Enrique A. Queija Siguas',
-        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima, Perú.',
+        Country: 'Enrique A. Queija S.',
+        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima.',
         tel: '+511 625 9747',
         Movil: '',
         mail: 'info@efhperu.com',
@@ -287,11 +306,7 @@ var ventas = {
     },
 };
 
-
-
-
-
-
+/*Llenado de detalles de contacto en banderas*/
 $('.ventas .flag-wrapper div').click(function () {
     var pais = $(this).attr("id");
     var mypais = $(this).attr("title");
@@ -303,4 +318,11 @@ $('.ventas .flag-wrapper div').click(function () {
     $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
     $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
     $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
-}); 
+});
+
+
+
+function detectar_pais(pais) {
+    xurl = window.location
+    alert(xurl)
+    }
