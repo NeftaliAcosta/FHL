@@ -12,7 +12,7 @@
         var corpx = 'http://www.efhcorporativo.com/';
         var fh = 'http://fhenlinea.com/';
         var fhx = 'http://www.fhenlinea.com/';
-        var ht = 'http://localhost:58702/';
+        var ht = 'http://localhost:52409/';
         $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
         if ((fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
             var mx = true;
@@ -44,7 +44,7 @@
     }
 
 
-    /*Proceso de invacion de modal por parametros*/
+    /*Inicio Proceso de invacion de modal por parametros*/
     function $_GET(param) {
         url = document.URL;
         url = String(url.match(/\?+.+/));
@@ -74,6 +74,7 @@
     else if (($_GET("producto") == 'ecoclima')) {
         $('#ecoclima').modal('show')
     }
+    /*Fin Proceso de invacion de modal por parametros*/
 
     /*Carga de contenedor de puto de venta*/
     if ($('.ventas').is(':hidden')) {
