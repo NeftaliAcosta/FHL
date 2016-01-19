@@ -1656,14 +1656,17 @@ li spanl .desc{
     color: #FFF;
 }
 
-.flag-wrapper {
+.modal-body .flag-wrapper, .ventas .flag-wrapper {
     width: 100%;
     display: inline-block;
     position: relative;
     box-shadow:none!important;
     overflow: hidden;
     margin-bottom: 20px;
+    cursor: pointer;
+    cursor: hand;
 }
+
 
 @media (min-width: 1200px) {
     .col-lg-2 {
@@ -1717,17 +1720,21 @@ h4, .h4 {
     }
 }
 .detalles{
-    background-color:#cf0a2b;
-    color:#fff;
-    border-color:#000;
+    background-color:#e3e3e3;
+    color:#000;
+    border-color:#e3e3e3;
+    padding: 12px;
     
 }
 .detalles p{
      margin: 5px;
+     
+
 }
 
 .contacto{
     margin: 10px;
+
 }
 .detalles span{
     font-weight:bold;
@@ -1771,3 +1778,28 @@ right: 10px;
  right: 40px;
 }
 /*######################*/
+
+
+/*Fixed top bar*/
+@media (max-width: 1500px) {
+            #gris {
+                height: 54px;
+            }
+
+            .social_links {
+                margin-top: 10px;
+            }
+            .phone{
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+             .social_links {
+                margin-top: 0px;
+            }
+            .phone{
+                margin-top: 0px;
+            }
+        }
+        /*Fixed top bar*/

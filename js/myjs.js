@@ -15,7 +15,7 @@
         var ht = 'http://localhost:58702/';
         $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
         if ((fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
-
+            var mx = true;
             $('.mflags a').mouseover(function () {
                 country = $(this).attr("id");
                 param = '?flags=0';
@@ -34,6 +34,7 @@
                 country = $(this).attr("id");
                 $("a").prop("href", country + param);
             })
+            mx = false;
         }
 
     }
@@ -73,6 +74,76 @@
     else if (($_GET("producto") == 'ecoclima')) {
         $('#ecoclima').modal('show')
     }
+
+    /*Carga de contenedor de puto de venta*/
+    if ($('.ventas').is(':hidden')) {
+        if (MX = true) {
+            pais = "Mexico";
+         
+        }
+        if ((URLdomain == 'http://www.efhargentina.com/') || (URLdomain == 'http://efhargentina.com/')) {
+            pais = "Argentina";
+        }
+
+        if ((URLdomain == 'http://www.efhbolivia.com/') || (URLdomain == 'http://efhvolivia.com/')) {
+            pais = "Bolivia";
+        }
+        if ((URLdomain == 'http://www.efhchile.com/') || (URLdomain == 'http://efhchile.com/')) {
+            pais = "Chile";
+        }
+        if ((URLdomain == 'http://www.efhcolombia.com/') || (URLdomain == 'http://efhcolombia.com/')) {
+            pais = "Colombia";
+        }
+        if ((URLdomain == 'http://www.efhcostarica.com/') || (URLdomain == 'http://efhcostarica.com/')) {
+            pais = "CostaRica";
+        }
+        if ((URLdomain == 'http://www.efhecuador.com/') || (URLdomain == 'http://efhecuador.com/')) {
+            pais = "Ecuador";
+        }
+        if ((URLdomain == 'http://www.efhelsalvador.com/') || (URLdomain == 'http://efhelsalvador.com/')) {
+            pais = "Ecuador";
+        }
+        if ((URLdomain == 'http://www.efhguatemala.com/') || (URLdomain == 'http://efhguatemala.com/')) {
+            pais = "Guatemala";
+        }
+        if ((URLdomain == 'http://www.efhhonduras.com/') || (URLdomain == 'http://efhhonduras.com/')) {
+            pais = "Honduras";
+        }
+        if ((URLdomain == 'http://www.efhnicaragua.com/') || (URLdomain == 'http://efhnicaragua.com/')) {
+            pais = "Nicaragua";
+        }
+        if ((URLdomain == 'http://www.efhnicaragua.com/') || (URLdomain == 'http://efhnicaragua.com/')) {
+            pais = "Nicaragua";
+        }
+        if ((URLdomain == 'http://www.efhpanama.com/') || (URLdomain == 'http://efhpanama.com/')) {
+            pais = "Panama";
+        }
+        if ((URLdomain == 'http://www.efhcaribe.com/') || (URLdomain == 'http://efhcaribe.com/')) {
+            pais = "Rdominicana";
+        }
+
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span>" + pais + "</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas[pais].Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas[pais].tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+    }
+    else {
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span> México</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas.Mexico.Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas.Mexico.tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas.Mexico.Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas.Mexico.mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas.Mexico.web + "</p>");
+    }
+    /*Fin del div detalles de puntos de venta*/
+
+
 
 
     /*Carga el efecto carousel al iniciar el sitio
@@ -142,28 +213,12 @@ $("#btnCliente").on('click', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Llenado de detalles de contacto en banderas*/
 var ventas = {
     Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
-        Country: 'Raúl Ramallo',
+        Direccion: 'Miguel Ángel de Quevedo número 8 Piso 5, Colonia Hacienda Guadalupe Chimalistac, Delegación Álvaro Obregón, 01050 México, Distrito Federal.',
+        Country: '',
         tel: '+52 (55)5663-3220',
         Movil: '',
         mail: 'info@efhcorporativo.com',
@@ -187,7 +242,7 @@ var ventas = {
     },
     Chile: {
         Country: 'David Segovia ',
-        Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile, Chile.',
+        Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
         tel: '+562 2753 3604 /+569 4245 1987',
         Movil: '',
         mail: 'info@efhchile.com',
@@ -220,6 +275,7 @@ var ventas = {
     Salvador: {
         Country: 'Lic. Angela G. Escobar',
         Direccion: '13 Calle Poniente No. 4344, Col. Escalón, San Salvador, El Salvador, C.A.',
+        Movil: '',
         tel: '+503 2264 5961/62/63',
         mail: 'info@efhelsalvador.com',
         web: 'www.efhelsalvador.com'
@@ -271,12 +327,6 @@ var ventas = {
         web: 'www.efhcaribe.com'
     },
 };
-
-
-
-
-
-
 $('.ventas .flag-wrapper div').click(function () {
     var pais = $(this).attr("id");
     var mypais = $(this).attr("title");
@@ -284,6 +334,8 @@ $('.ventas .flag-wrapper div').click(function () {
     $('.detalles #Country').html("<p><span>País: </span>" + mypais + "</p>");
     $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
     $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas[pais].Direccion + "</p>");
-    $('.detalles #Ventas').html("<p><span>Dirección: </span>" + ventas[pais].tel + "</p>");
-    $('.detalles #Movil').html("<p><span>Dirección: </span>" + ventas[pais].Movil + "</p>");
+    $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas[pais].tel + "</p>");
+    $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
+    $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
+    $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
 }); 
