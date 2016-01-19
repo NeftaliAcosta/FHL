@@ -1712,10 +1712,8 @@ h4, .h4 {
 
 
 
-
-
 @media screen and (min-width: 768px) {
-   .ventas .col-lg-1 {
+   .ventas .col-xs-1 {
         width: 7%;
     }
 }
@@ -1740,7 +1738,28 @@ h4, .h4 {
     font-weight:bold;
 }
 
+/*FIXED HEADER*/
+@media (max-width: 1500px) {
+            #gris {
+                height: 54px;
+            }
 
+            .social_links {
+                margin-top: 10px;
+            }
+            .phone{
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+             .social_links {
+                margin-top: 0px;
+            }
+            .phone{
+                margin-top: 0px;
+            }
+        }
 /*#####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
