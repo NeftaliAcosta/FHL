@@ -1656,17 +1656,14 @@ li spanl .desc{
     color: #FFF;
 }
 
-.modal-body .flag-wrapper, .ventas .flag-wrapper {
+.flag-wrapper {
     width: 100%;
     display: inline-block;
     position: relative;
     box-shadow:none!important;
     overflow: hidden;
     margin-bottom: 20px;
-    cursor: pointer;
-    cursor: hand;
 }
-
 
 @media (min-width: 1200px) {
     .col-lg-2 {
