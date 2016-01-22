@@ -21,6 +21,7 @@
                 param = '?flags=0';
                 if (country == 'http://efh.mx') {
                     $("a").prop("href", URLdomain + param);
+                    
                 }
                 else {
                     $("a").prop("href", country + param);
@@ -78,6 +79,7 @@
 
     /*Carga de contenedor de puto de venta*/
     if ($('.ventas').is(':hidden')) {
+
         if (MX = true) {
             pais = "Mexico";
          
@@ -131,8 +133,10 @@
         $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
         $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
         $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+        
     }
     else {
+        
         $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
         $('.detalles #Country').html("<p><span>País: </span> México</p>");
         $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
@@ -157,7 +161,7 @@
     });
 
 
-    $('.carousel clientes').carousel('show');
+    $('.carousel clientes ul').carousel('show');
 
  
     
@@ -198,6 +202,13 @@ $('.cliente li img').mouseover(function () {
 
     });
 
+
+$('.mflags .modal-dialog .modal-content .modal-body .flag-wrapper').mouseover(function () {
+    $(this).css("opacity", "1");
+})
+    .mouseout(function () {
+        $(this).css("opacity", "0.7");
+    });
 
 /*Pauso video al cerrar modal*/
 $('.close').click(function () {
@@ -266,7 +277,7 @@ var ventas = {
         web: 'www.efhcostarica.com'
     },
     Ecuador: {
-        Country: 'Xavier Verdesoto Vallejo',
+        Country: 'Xavier Verdesoto V.',
         Direccion: 'Italia N31-54 y Vancouver, Quito, Ecuador.',
         tel: '+5932 6007500, 6007502, 6007503.',
         Movil: '+593 099515200',
@@ -312,8 +323,8 @@ var ventas = {
         web: 'www.efhpanama.com'
     },
     Peru: {
-        Country: 'Enrique A. Queija Siguas',
-        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima, Perú.',
+        Country: 'Enrique A. Queija S.',
+        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima.',
         tel: '+511 625 9747',
         Movil: '',
         mail: 'info@efhperu.com',
@@ -339,4 +350,6 @@ $('.ventas .flag-wrapper div').click(function () {
     $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
     $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
     $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+
+
 }); 

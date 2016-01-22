@@ -1658,6 +1658,7 @@ li spanl .desc{
 
 .modal-body .flag-wrapper, .ventas .flag-wrapper {
     width: 100%;
+    opacity:0.7;
     display: inline-block;
     position: relative;
     box-shadow:none!important;
@@ -1667,6 +1668,13 @@ li spanl .desc{
     cursor: hand;
 }
 
+
+
+.ventas .flag-wrapper {
+
+    opacity:1;
+
+}
 
 @media (min-width: 1200px) {
     .col-lg-2 {
@@ -1743,7 +1751,23 @@ h4, .h4 {
 .centrar{
     margin: auto;
 }
-/*#####################
+
+.mflags .modal-dialog .modal-content .modal-body{
+    background-color: #e3e3e3;
+}
+
+.mflags .modal-dialog .modal-content p{
+   font-size: 18px;
+ 
+}
+.mflags .modal-dialog .modal-content h4{
+   font-size: 12px;
+   padding-top  :2px;
+ 
+}
+
+
+/*####################
 Estilo adicional requerido para formato de Twitts carousel
 ######################*/
 
