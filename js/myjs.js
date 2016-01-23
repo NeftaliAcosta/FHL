@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+   
     var URLdomain = window.location;
     dom = window.location.host;
     doma = 'http://' + dom + '/';
@@ -394,3 +395,42 @@ $('.ventas .flag-wrapper').mouseover(function () {
             $(this).css("opacity", "0.7");
         }
     });
+
+
+$('#btnEnviarCorreo').click(function () {
+    var Nombre = $('#txtNombre').val();
+    var Email = $('#txtEmail').val();
+    var Asunto = $('#txtSubject').val();
+    var Mensaje = $('#txtMensaje').val();
+    var obj;
+    if ((Nombre == '') || (Email == '') || (Asunto == '') || (Mensaje == '')) {
+        $('#respuesta').show();
+        $('#respuesta').html("<p class='msjmail'>LLene correctamente el formulario</p>")
+        
+    }
+    else {
+        $.ajax({
+            dataType: "json",
+            contentType: "application/json",
+            async: false,
+            url: '/Servicio.aspx/EnviarCorreo',
+            data: JSON.stringify({ "Nombre": Nombre, "Email": Email, "Asunto": Asunto, "Mensaje": Mensaje }),
+            type: "POST",
+            success: function (msg) {
+                obj = msg.d
+                $('#respuesta').show();
+                $('#respuesta').html("<p class='msjmail'>" + obj + "</p>")
+                $('#txtNombre').val('');
+                $('#txtEmail').val('');
+                $('#txtSubject').val('');
+                $('#txtMensaje').val('');
+                
+            }
+        });
+
+    }
+    $('#respuesta').hide(7000)
+  
+    return false;
+    
+});

@@ -1829,3 +1829,10 @@ right: 10px;
             }
         }
         /*Fixed top bar*/
+
+
+  input{
+    background-color: rgb(255, 255, 255)!important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
