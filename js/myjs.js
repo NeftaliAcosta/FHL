@@ -91,8 +91,11 @@
         /*Activa la bandera de México sobre las demás.*/
         $('#wMexico').css("opacity", "1");
         dselect = 'Mexico';
+        /*Esconde info de contacto adicional para México en móvil*/
+        $('div #mxdetalles').hide();
     }
-    else{
+    else {
+        /*Asignación de variable por dominio para cargar punto de venta según dominio*/
         if (MX = true) {
             pais = "Mexico";
          
@@ -148,37 +151,28 @@
         $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
         mywraper = 'w' + pais;
         $('#' + "" + mywraper + " ").css("opacity", "1");
-        dselect = 'w'+ mywraper;
-        
+        dselect = mywraper;
+        /*Validación de país para mostrar info de contacto para México.*/
+        if (pais == 'Mexico') {
+            $('div #mxdetalles').show();
+        }
+        else {
+            $('div #mxdetalles').hide();
+        }
     }
     
     /*Fin del div detalles de puntos de venta*/
 
-
-
-
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
-    $('#productos').carousel({
-        interval: 3999
-    });
-    $('#carousel2').carousel({
-        interval: 4000
-    });
+    //$('#productos').carousel({
+    //    interval: 3999
+    //});
+    //$('#carousel2').carousel({
+    //    interval: 4000
+    //});
 
-
-    $('.carousel clientes ul').carousel('show');
-
- 
-   
-  
 });/*Fin Document ready*//*=============================================*/
-
-
-
-
-
-
 
 /* Js Facebook*/
 (function (d, s, id) {
@@ -188,7 +182,6 @@
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=556541261138043";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
 
 /*zopin*/
 window.$zopim || (function (d, s) {
@@ -200,7 +193,6 @@ window.$zopim || (function (d, s) {
     $.src = "//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X"; z.t = +new Date; $.
     type = "text/javascript"; e.parentNode.insertBefore($, e)
 })(document, "script");
-
 
 /*Clientes img hover optimizado*/
 $('.cliente li img').mouseover(function () {
@@ -244,7 +236,7 @@ $('.mflags .modal-dialog .modal-content .modal-body .flag-wrapper').mouseover(fu
         $(this).css("opacity", "0.7");
     });
 
-/*Llenado de detalles de contacto en banderas*/
+/*Llenado de detalles de contacto en banderas por clic*/
 var ventas = {
     Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
@@ -358,6 +350,7 @@ var ventas = {
         web: 'www.efhcaribe.com'
     },
 };
+selec = ''; /*Variable global para efecto mouseover*/
 $('.ventas .flag-wrapper').click(function () {
     var pais = $('div',this).attr("id");
     var mypais = $('div', this).attr("title");
@@ -373,7 +366,13 @@ $('.ventas .flag-wrapper').click(function () {
     $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
     $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
     dselect = selec;
-   
+    /*Validación de país para mostrar info de contacto para México.*/
+    if (pais == 'Mexico') {
+        $('div #mxdetalles').show();
+    }
+    else {
+        $('div #mxdetalles').hide();
+    }
 });
 
 /*Efecto MouseOver Puntos de Venta*/
