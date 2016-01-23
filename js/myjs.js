@@ -72,6 +72,12 @@
     else if (($_GET("producto") == 'meol')) {
         $('#meol').modal('show')
     }
+    else if (($_GET("producto") == 'lider')) {
+        $('#lider').modal('show')
+    }
+    else if (($_GET("producto") == 'conociweb')) {
+        $('#conociweb').modal('show')
+    }
     else if (($_GET("producto") == 'ecoclima')) {
         $('#ecoclima').modal('show')
     }
