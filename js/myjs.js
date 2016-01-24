@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+   
     var URLdomain = window.location;
     dom = window.location.host;
     doma = 'http://' + dom + '/';
@@ -21,6 +22,7 @@
                 param = '?flags=0';
                 if (country == 'http://efh.mx') {
                     $("a").prop("href", URLdomain + param);
+                    
                 }
                 else {
                     $("a").prop("href", country + param);
@@ -44,7 +46,7 @@
     }
 
 
-    /*Proceso de invacion de modal por parametros*/
+    /*Inicio Proceso de invacion de modal por parametros*/
     function $_GET(param) {
         url = document.URL;
         url = String(url.match(/\?+.+/));
@@ -71,12 +73,36 @@
     else if (($_GET("producto") == 'meol')) {
         $('#meol').modal('show')
     }
+    else if (($_GET("producto") == 'lider')) {
+        $('#lider').modal('show')
+    }
+    else if (($_GET("producto") == 'conociweb')) {
+        $('#conociweb').modal('show')
+    }
     else if (($_GET("producto") == 'ecoclima')) {
         $('#ecoclima').modal('show')
     }
+    /*Fin Proceso de invacion de modal por parametros*/
 
     /*Carga de contenedor de puto de venta*/
     if ($('.ventas').is(':hidden')) {
+        /*En la versión móvil cargan siempre los datos de méxico*/
+        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
+        $('.detalles #Country').html("<p><span>País: </span> México</p>");
+        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
+        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas.Mexico.Direccion + "</p>");
+        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas.Mexico.tel + "</p>");
+        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas.Mexico.Movil + "</p>");
+        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas.Mexico.mail + "</p>");
+        $('.detalles #Web').html("<p><span>Web: </span>" + ventas.Mexico.web + "</p>");
+        /*Activa la bandera de México sobre las demás.*/
+        $('#wMexico').css("opacity", "1");
+        dselect = 'Mexico';
+        /*Esconde info de contacto adicional para México en móvil*/
+        $('div #mxdetalles').hide();
+    }
+    else {
+        /*Asignación de variable por dominio para cargar punto de venta según dominio*/
         if (MX = true) {
             pais = "Mexico";
          
@@ -121,7 +147,7 @@
         if ((URLdomain == 'http://www.efhcaribe.com/') || (URLdomain == 'http://efhcaribe.com/')) {
             pais = "Rdominicana";
         }
-
+        /*Carga los valores de punto de venta según el dominio*/
         $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
         $('.detalles #Country').html("<p><span>País: </span>" + pais + "</p>");
         $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
@@ -130,37 +156,29 @@
         $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
         $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
         $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
+        mywraper = 'w' + pais;
+        $('#' + "" + mywraper + " ").css("opacity", "1");
+        dselect = mywraper;
+        /*Validación de país para mostrar info de contacto para México.*/
+        if (pais == 'Mexico') {
+            $('div #mxdetalles').show();
+        }
+        else {
+            $('div #mxdetalles').hide();
+        }
     }
-    else {
-        $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
-        $('.detalles #Country').html("<p><span>País: </span> México</p>");
-        $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
-        $('.detalles #Direccion').html("<p><span>Dirección: </span>" + ventas.Mexico.Direccion + "</p>");
-        $('.detalles #Ventas').html("<p><span>Ventas: </span>" + ventas.Mexico.tel + "</p>");
-        $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas.Mexico.Movil + "</p>");
-        $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas.Mexico.mail + "</p>");
-        $('.detalles #Web').html("<p><span>Web: </span>" + ventas.Mexico.web + "</p>");
-    }
+    
     /*Fin del div detalles de puntos de venta*/
-
-
-
 
     /*Carga el efecto carousel al iniciar el sitio
     de los div de twiiter embed*/
-    $('#productos').carousel({
-        interval: 3999
-    });
-    $('#carousel2').carousel({
-        interval: 4000
-    });
+    //$('#productos').carousel({
+    //    interval: 3999
+    //});
+    //$('#carousel2').carousel({
+    //    interval: 4000
+    //});
 
-
-    $('.carousel clientes').carousel('show');
-
- 
-    
-  
 });/*Fin Document ready*//*=============================================*/
 
 /* Js Facebook*/
@@ -172,7 +190,6 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
 /*zopin*/
 window.$zopim || (function (d, s) {
     var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
@@ -183,7 +200,6 @@ window.$zopim || (function (d, s) {
     $.src = "//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X"; z.t = +new Date; $.
     type = "text/javascript"; e.parentNode.insertBefore($, e)
 })(document, "script");
-
 
 /*Clientes img hover optimizado*/
 $('.cliente li img').mouseover(function () {
@@ -197,13 +213,20 @@ $('.cliente li img').mouseover(function () {
 
     });
 
+/*Efecto Mouseover Modal Flags*/
+$('.mflags .modal-dialog .modal-content .modal-body .flag-wrapper').mouseover(function () {
+    $(this).css("opacity", "1");
+})
+    .mouseout(function () {
+        $(this).css("opacity", "0.7");
+    });
 
 /*Pauso video al cerrar modal*/
 $('.close').click(function () {
     document.getElementById('myvideo').pause();
 });
 
-
+/*Botón más y menos clientes versión xs*/
 $("#btnCliente").on('click', function () {
     if ($("#btnCliente").text() == "Menos clientes") {
         $("#btnCliente").text("Más clientes");
@@ -212,8 +235,15 @@ $("#btnCliente").on('click', function () {
     }
 });
 
+/*Efecto Mouseover Modal Flags*/
+$('.mflags .modal-dialog .modal-content .modal-body .flag-wrapper').mouseover(function () {
+    $(this).css("opacity", "1");
+})
+    .mouseout(function () {
+        $(this).css("opacity", "0.7");
+    });
 
-/*Llenado de detalles de contacto en banderas*/
+/*Llenado de detalles de contacto en banderas por clic*/
 var ventas = {
     Mexico: {
         RFC: 'Excelencia en Factor Humano S.A de C.V.',
@@ -257,15 +287,15 @@ var ventas = {
         web: 'www.efhcolombia.com'
     },
     CostaRica: {
-        Country: 'Raúl Ramallo ',
-        Direccion: '100 mts sur del Banco Nacional de Costa Rica, Curridabat, San José, Costa Rica',
+        Country: 'Rebeca Bustamante',
+        Direccion: 'Centro cultural norteamericano 200 mts norte, 50 mts este oficentro Ofident, los Yoses, San Jose CR.',
         tel: '+506 4030-7764, +506 4034-3947.',
         Movil: '+506 8751-7643',
         mail: 'info@efhcostarica.com',
         web: 'www.efhcostarica.com'
     },
     Ecuador: {
-        Country: 'Xavier Verdesoto Vallejo',
+        Country: 'Xavier Verdesoto V.',
         Direccion: 'Italia N31-54 y Vancouver, Quito, Ecuador.',
         tel: '+5932 6007500, 6007502, 6007503.',
         Movil: '+593 099515200',
@@ -311,8 +341,8 @@ var ventas = {
         web: 'www.efhpanama.com'
     },
     Peru: {
-        Country: 'Enrique A. Queija Siguas',
-        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima, Perú.',
+        Country: 'Enrique A. Queija S.',
+        Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima.',
         tel: '+511 625 9747',
         Movil: '',
         mail: 'info@efhperu.com',
@@ -327,9 +357,13 @@ var ventas = {
         web: 'www.efhcaribe.com'
     },
 };
-$('.ventas .flag-wrapper div').click(function () {
-    var pais = $(this).attr("id");
-    var mypais = $(this).attr("title");
+selec = ''; /*Variable global para efecto mouseover*/
+$('.ventas .flag-wrapper').click(function () {
+    var pais = $('div',this).attr("id");
+    var mypais = $('div', this).attr("title");
+    selec = 'w' + pais;
+    $(this).css("opacity", "1");
+    $('#' + ""+ dselect+ "").css("opacity", "0.7");
     $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
     $('.detalles #Country').html("<p><span>País: </span>" + mypais + "</p>");
     $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
@@ -338,4 +372,65 @@ $('.ventas .flag-wrapper div').click(function () {
     $('.detalles #Movil').html("<p><span>Móvil: </span>" + ventas[pais].Movil + "</p>");
     $('.detalles #Correo').html("<p><span>E-mail: </span>" + ventas[pais].mail + "</p>");
     $('.detalles #Web').html("<p><span>Web: </span>" + ventas[pais].web + "</p>");
-}); 
+    dselect = selec;
+    /*Validación de país para mostrar info de contacto para México.*/
+    if (pais == 'Mexico') {
+        $('div #mxdetalles').show();
+    }
+    else {
+        $('div #mxdetalles').hide();
+    }
+});
+
+/*Efecto MouseOver Puntos de Venta*/
+$('.ventas .flag-wrapper').mouseover(function () {
+    $(this).css("opacity", "1");
+    activo = $(this).attr("id")
+})
+    .mouseout(function () {
+        if (selec == activo) {
+            $(this).css("opacity", "1")
+        }
+        else {
+            $(this).css("opacity", "0.7");
+        }
+    });
+
+
+$('#btnEnviarCorreo').click(function () {
+    var Nombre = $('#txtNombre').val();
+    var Email = $('#txtEmail').val();
+    var Asunto = $('#txtSubject').val();
+    var Mensaje = $('#txtMensaje').val();
+    var obj;
+    if ((Nombre == '') || (Email == '') || (Asunto == '') || (Mensaje == '')) {
+        $('#respuesta').show();
+        $('#respuesta').html("<p class='msjmail'>LLene correctamente el formulario</p>")
+        
+    }
+    else {
+        $.ajax({
+            dataType: "json",
+            contentType: "application/json",
+            async: false,
+            url: '/Servicio.aspx/EnviarCorreo',
+            data: JSON.stringify({ "Nombre": Nombre, "Email": Email, "Asunto": Asunto, "Mensaje": Mensaje }),
+            type: "POST",
+            success: function (msg) {
+                obj = msg.d
+                $('#respuesta').show();
+                $('#respuesta').html("<p class='msjmail'>" + obj + "</p>")
+                $('#txtNombre').val('');
+                $('#txtEmail').val('');
+                $('#txtSubject').val('');
+                $('#txtMensaje').val('');
+                
+            }
+        });
+
+    }
+    $('#respuesta').hide(7000)
+  
+    return false;
+    
+});

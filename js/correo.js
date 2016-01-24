@@ -1,26 +1,27 @@
 ﻿$(document).ready(function () {
+    alert("Hola");
     $("#btnEnviarCorreo").on("click", function () {        
         //--------enviar correo---------------//
-        var objCorreo = {};
-        objCorreo.Nombre = $('#txtNombre').val();
-        objCorreo.Email = $('#txtEmail').val();
-        objCorreo.Asunto = $('#txtSubject').val();
-        objCorreo.Mensaje = $('#txtMensaje').val();
-
+       
+         var Nombre = $('#txtNombre').val();
+         var Email = $('#txtEmail').val();
+         var Asunto = $('#txtSubject').val();
+         var Mensaje = $('#txtMensaje').val();
+         var obj;
         $.ajax({
             dataType: "json",
             contentType: "application/json",
             async: false,            
-            url: 'http://pruebas.efhcorporativo.com/Cotizaciones/Mostrar.aspx/enviarEmailFHL',
-            data: JSON.stringify({ 'datos': objCorreo }),
+            url: '/Servicio.aspx/EnviarCorreo',
+            data: JSON.stringify({ "Nombre": Nombre, "Email": Email, "Asunto": Asunto, "Mensaje": Mensaje }),
             type: "POST",
             success: function (msg) {
-                alert(msg.d);
+                obj = msg.d;
             },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(textStatus + ": " + XMLHttpRequest.responseText);
+            error: function (jqXHR, exception) {
             }
+
         });
-    
+        return obj;
     });
 });
