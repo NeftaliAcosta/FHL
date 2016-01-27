@@ -1,7 +1,8 @@
 ﻿$(document).ready(function () {
-   
+    
     var URLdomain = window.location;
     dom = window.location.host;
+    
     doma = 'http://' + dom + '/';
     if (URLdomain == doma) {
         /*Se detecta URL limpia y cargo el modal de paises*/
@@ -252,7 +253,7 @@ var ventas = {
         tel: '+52 (55)5663-3220',
         Movil: '',
         mail: 'info@efhcorporativo.com',
-        web: 'www.efh.mx'
+        web: 'www.efhcorporativo.com'
     },
     Argentina: {
         Country: '',
@@ -268,7 +269,7 @@ var ventas = {
         tel: '+591 77556161',
         Movil: '',
         mail: 'info@efhbolivia.com',
-        web: 'www.efhBolivia.com'
+        web: 'www.efhbolivia.com'
     },
     Chile: {
         Country: 'David Segovia ',
@@ -282,14 +283,14 @@ var ventas = {
         Country: 'Alejandro García',
         Direccion: 'Calle 20 No.82-52 Oficina 402, Centro Empresarial Hayuelos, Bogotá D.C.',
         tel: '+57 1 7041489, +57 1 7041487.',
-        Movil:'+57 31 64 73 89 81',
+        Movil: '+573 16473-8981',
         mail: 'info@efhcolombia.com',
         web: 'www.efhcolombia.com'
     },
     CostaRica: {
         Country: 'Rebeca Bustamante',
         Direccion: 'Centro cultural norteamericano 200 mts norte, 50 mts este oficentro Ofident, los Yoses, San Jose CR.',
-        tel: '+506 4030-7764, +506 4034-3947.',
+        tel: '+506 4030-7764',
         Movil: '+506 8751-7643',
         mail: 'info@efhcostarica.com',
         web: 'www.efhcostarica.com'
@@ -298,7 +299,7 @@ var ventas = {
         Country: 'Xavier Verdesoto V.',
         Direccion: 'Italia N31-54 y Vancouver, Quito, Ecuador.',
         tel: '+5932 6007500, 6007502, 6007503.',
-        Movil: '+593 099515200',
+        Movil: '+593 09951-5200',
         mail: 'info@efhecuador.com',
         web: 'www.efhecuador.com'
     },
@@ -322,6 +323,7 @@ var ventas = {
         Country: 'Ing. Gustavo Molina',
         Direccion: '2a. calle No. 4101 Col. Florencia Sur Tegucigalpa, Honduras, CA',
         tel: '+504 2232 0013, +504 9963 4879',
+        Movil: '',
         mail: 'info@efhhonduras.com',
         web: 'www.efhhonduras.com'
     },
@@ -334,7 +336,7 @@ var ventas = {
     },
     Panama: {
         Country: 'Jorge Isaac Pitty M.',
-        Direccion: 'Calle 8 La Rivera Don Bosco, Local 57-E Ciudad de Panamá, Panamá.',
+        Direccion: 'Calle 8 La Rivera Don Bosco, Local 57-E Ciudad de Panamá, Panamá. República Dominicana.',
         tel: '+00 507 293 6903.',
         Movil:'+00 507 6680 711',
         mail: 'info@efhpanama.com',
@@ -344,7 +346,7 @@ var ventas = {
         Country: 'Enrique A. Queija S.',
         Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima.',
         tel: '+511 625 9747',
-        Movil: '',
+        Movil: '+519 4848-3828',
         mail: 'info@efhperu.com',
         web: 'www.efhperu.com'
     },
@@ -401,6 +403,7 @@ $('#btnEnviarCorreo').click(function () {
     var Nombre = $('#txtNombre').val();
     var Email = $('#txtEmail').val();
     var Asunto = $('#txtSubject').val();
+    var mydom = String(window.location.host);
     var Mensaje = $('#txtMensaje').val();
     var obj;
     if ((Nombre == '') || (Email == '') || (Asunto == '') || (Mensaje == '')) {
@@ -414,7 +417,7 @@ $('#btnEnviarCorreo').click(function () {
             contentType: "application/json",
             async: false,
             url: '/Servicio.aspx/EnviarCorreo',
-            data: JSON.stringify({ "Nombre": Nombre, "Email": Email, "Asunto": Asunto, "Mensaje": Mensaje }),
+            data: JSON.stringify({ "Nombre": Nombre, "Email": Email, "Asunto": Asunto,"pais":pais, "Mensaje": Mensaje,"mydom": mydom }),
             type: "POST",
             success: function (msg) {
                 obj = msg.d

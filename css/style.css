@@ -1836,3 +1836,14 @@ right: 10px;
     background-image: none;
     color: rgb(0, 0, 0);
 }
+  .productos .col-xs-12{
+      padding:20px!important;
+  }
+
+ /*Fixed footer*/
+@media screen and (min-width: 768px){
+
+     .myfooter .col-lg-2 {
+    width: 16%;
+}
+}
