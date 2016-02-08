@@ -1807,7 +1807,7 @@ right: 10px;
 
 
 /*Fixed top bar*/
-@media (max-width: 1500px) {
+/*@media (max-width: 1500px) {
             #gris {
                 height: 54px;
             }
@@ -1827,7 +1827,7 @@ right: 10px;
             .phone{
                 margin-top: 0px;
             }
-        }
+        }*/
         /*Fixed top bar*/
 
 
@@ -1847,3 +1847,4 @@ right: 10px;
     width: 16%;
 }
 }
+

@@ -1,16 +1,10 @@
 ﻿Option Explicit On
 Option Strict On
-Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Web
-Imports System.Web.UI
-Imports System.Web.UI.WebControls
 Imports System.Net.Mail
 Imports System.Net
 Imports System.Web.Services
-Imports System.Configuration
 Imports System.IO
+Imports System.Web
 
 Partial Class Servicio
     Inherits System.Web.UI.Page
@@ -25,7 +19,7 @@ Partial Class Servicio
 
         Dim m As MailMessage = New MailMessage()
         Dim smtp As SmtpClient = New SmtpClient()
-        Dim Too As String = "neftali@efhcorporativo.com"
+        Dim Too As String = "info@efh.com.mx"
         Dim usr As String = "no-reply@efh.com.mx"
         Dim plantilla As String = File.ReadAllText(HttpContext.Current.Server.MapPath("~/EmailTemplate.html"))
         Dim mymensaje As String = String.Format(plantilla, Nombre, Email, Asunto, pais, Mensaje, mydom)

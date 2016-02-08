@@ -159,7 +159,7 @@ function topMenu() {
             
             if (scrollByClick == name_marker || !scrollByClick) {
                
-                var position = $(this).offset().top;
+                var position = $(this).offset().top - 120;
                 var name_anchor = name_marker.replace('_marker', '_anchor');
                 if (top >= position - $("#header .inner").height()) {
                     $("#top_menu li a[href='" + name_anchor + "']").closest('li').addClass('active styler_parent_active').siblings().removeClass('active styler_parent_active');

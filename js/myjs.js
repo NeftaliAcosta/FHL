@@ -6,6 +6,10 @@
     doma = 'http://' + dom + '/';
     if (URLdomain == doma) {
         /*Se detecta URL limpia y cargo el modal de paises*/
+        var psmx = 'http://psicosoft.mx/';
+        var psmxx = 'http://www.psicosoft.mx/';
+        var pscom = 'http://psicosoft.com.mx/';
+        var pscomx = 'http://www.psicosoft.com.mx/';
         var efh = 'http://efh.com.mx/';
         var mx = 'http://efh.mx/';
         var corp = 'http://efhcorporativo.com/';
@@ -14,22 +18,25 @@
         var corpx = 'http://www.efhcorporativo.com/';
         var fh = 'http://fhenlinea.com/';
         var fhx = 'http://www.fhenlinea.com/';
-        var ht = 'http://localhost:52409/';
+        var ht = 'http://localhost:62860/';
+
+        /*Si se accede de algunos de los 4 dominios relacionados se detecta el dominio
+           y se sustituye en la bandera de México.*/
         $('#flags').modal({ visible: 'show', backdrop: 'static', keyboard: 'false' });
-        if ((fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
+        if ((pscom == URLdomain)  || (pscomx == URLdomain) || (psmx == URLdomain) || (psmxx == URLdomain) || (fh == URLdomain) || (fhx == URLdomain) || (ht == URLdomain) || (efh == URLdomain) || (mx == URLdomain) || (corp == URLdomain) || (efhx == URLdomain) || (mxx == URLdomain) || (corpx == URLdomain)) {
             var mx = true;
             $('.mflags a').mouseover(function () {
                 country = $(this).attr("id");
                 param = '?flags=0';
                 if (country == 'http://efh.mx') {
-                    $("a").prop("href", URLdomain + param);
-                    
+                    $("a").prop("href", URLdomain + param);   
                 }
                 else {
                     $("a").prop("href", country + param);
                 }
             })
         }
+            /*Si no se accede desde Mexico, la bandera de MX enviará siempre a efh.mx*/
         else {
             /*Asignar URL a Bandera de modal*/
             $('.mflags a').mouseover(function () {
@@ -41,12 +48,11 @@
         }
 
     }
+        /*Si no se detecta in dominio limpio el modal de banderas no se ejecuta.*/
     else {
         /*No invoco el modal de las banderas*/
         $('#flags').modal('hide');
     }
-
-
     /*Inicio Proceso de invacion de modal por parametros*/
     function $_GET(param) {
         url = document.URL;
@@ -85,9 +91,10 @@
     }
     /*Fin Proceso de invacion de modal por parametros*/
 
-    /*Carga de contenedor de puto de venta*/
+    /*Carga de contenedor de punto de venta y no se muestra la opción de los paises.*/
     if ($('.ventas').is(':hidden')) {
         /*En la versión móvil cargan siempre los datos de méxico*/
+        $('#details').html("<p><span>" + ventas.Mexico.vtel + " info@efhcorporativo.com</span></p>");
         $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
         $('.detalles #Country').html("<p><span>País: </span> México</p>");
         $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas.Mexico.Country + "</p>");
@@ -108,47 +115,48 @@
             pais = "Mexico";
          
         }
-        if ((URLdomain == 'http://www.efhargentina.com/') || (URLdomain == 'http://efhargentina.com/')) {
+        if ((dom == 'efhargentina.com') || (dom == 'www.efhargentina.com')) {
             pais = "Argentina";
         }
 
-        if ((URLdomain == 'http://www.efhbolivia.com/') || (URLdomain == 'http://efhvolivia.com/')) {
+        if ((dom == 'efhbolivia.com') || (dom == 'www.efhbolivia.com')) {
             pais = "Bolivia";
         }
-        if ((URLdomain == 'http://www.efhchile.com/') || (URLdomain == 'http://efhchile.com/')) {
+        if ((dom == 'efhchile.com') || (dom == 'www.efhchile.com')) {
             pais = "Chile";
         }
-        if ((URLdomain == 'http://www.efhcolombia.com/') || (URLdomain == 'http://efhcolombia.com/')) {
+        if ((dom == 'efhcolombia.com') || (dom == 'www.efhcolombia.com')) {
             pais = "Colombia";
         }
-        if ((URLdomain == 'http://www.efhcostarica.com/') || (URLdomain == 'http://efhcostarica.com/')) {
+        if ((dom == 'efhcostarica.com') || (dom == 'efhcostarica.com') ){
             pais = "CostaRica";
         }
-        if ((URLdomain == 'http://www.efhecuador.com/') || (URLdomain == 'http://efhecuador.com/')) {
+        if ((dom == 'efhecuador.com') || (dom == 'efhecuador.com') ){
             pais = "Ecuador";
         }
-        if ((URLdomain == 'http://www.efhelsalvador.com/') || (URLdomain == 'http://efhelsalvador.com/')) {
-            pais = "Ecuador";
+        if ((dom == 'efhelsalvador.com') || (dom == 'www.efhelsalvador.com')){
+            pais = "Salvador";
         }
-        if ((URLdomain == 'http://www.efhguatemala.com/') || (URLdomain == 'http://efhguatemala.com/')) {
+        if ((dom == 'efhguatemala.com')||(dom == 'www.efhguatemala.com')){
             pais = "Guatemala";
         }
-        if ((URLdomain == 'http://www.efhhonduras.com/') || (URLdomain == 'http://efhhonduras.com/')) {
+        if ((dom == 'efhhonduras.com')||(dom == 'www.efhhonduras.com')){
             pais = "Honduras";
         }
-        if ((URLdomain == 'http://www.efhnicaragua.com/') || (URLdomain == 'http://efhnicaragua.com/')) {
+        if ((dom == 'efhperu.com') || (dom == 'www.efhperu.com')) {
+            pais = "Peru";
+        }
+        if ((dom == 'efhnicaragua.com')||(dom == 'www.efhnicaragua.com')){
             pais = "Nicaragua";
         }
-        if ((URLdomain == 'http://www.efhnicaragua.com/') || (URLdomain == 'http://efhnicaragua.com/')) {
-            pais = "Nicaragua";
-        }
-        if ((URLdomain == 'http://www.efhpanama.com/') || (URLdomain == 'http://efhpanama.com/')) {
+        if ((dom == 'efhpanama.com') || (dom == 'www.efhpanama.com')){
             pais = "Panama";
         }
-        if ((URLdomain == 'http://www.efhcaribe.com/') || (URLdomain == 'http://efhcaribe.com/')) {
+        if ((dom == 'efhcaribe.com')|| (dom == 'www.efhcaribe.com')){
             pais = "Rdominicana";
         }
         /*Carga los valores de punto de venta según el dominio*/
+        $('#details').html("<p><span>" + ventas[pais].vtel + " info@efhcorporativo.com</span></p>");
         $('.detalles #rfc').html("<p><span>" + ventas.Mexico.RFC + "</span></p>");
         $('.detalles #Country').html("<p><span>País: </span>" + pais + "</p>");
         $('.detalles #CountryManager').html("<p><span>Country Manager: </span>" + ventas[pais].Country + "</p>");
@@ -182,25 +190,7 @@
 
 });/*Fin Document ready*//*=============================================*/
 
-/* Js Facebook*/
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=556541261138043";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 
-/*zopin*/
-window.$zopim || (function (d, s) {
-    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
-    d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
-        z.set.
-        _.push(o)
-    }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
-    $.src = "//v2.zopim.com/?3anqSB90R9klm0u9AVGgMUkI8CmnDJ5X"; z.t = +new Date; $.
-    type = "text/javascript"; e.parentNode.insertBefore($, e)
-})(document, "script");
 
 /*Clientes img hover optimizado*/
 $('.cliente li img').mouseover(function () {
@@ -211,10 +201,9 @@ $('.cliente li img').mouseover(function () {
     .mouseout(function () {
         var src = $(this).attr("src").replace("img/fhl/" + tag + ".jpg", "img/fhl/" + tag + "n.jpg");
         $(this).attr("src", src);
-
     });
 
-/*Efecto Mouseover Modal Flags*/
+/*Efecto Mouseover Modal Flags del*/
 $('.mflags .modal-dialog .modal-content .modal-body .flag-wrapper').mouseover(function () {
     $(this).css("opacity", "1");
 })
@@ -236,13 +225,6 @@ $("#btnCliente").on('click', function () {
     }
 });
 
-/*Efecto Mouseover Modal Flags*/
-$('.mflags .modal-dialog .modal-content .modal-body .flag-wrapper').mouseover(function () {
-    $(this).css("opacity", "1");
-})
-    .mouseout(function () {
-        $(this).css("opacity", "0.7");
-    });
 
 /*Llenado de detalles de contacto en banderas por clic*/
 var ventas = {
@@ -251,6 +233,7 @@ var ventas = {
         Direccion: 'Miguel Ángel de Quevedo número 8 Piso 5, Colonia Hacienda Guadalupe Chimalistac, Delegación Álvaro Obregón, 01050 México, Distrito Federal.',
         Country: '',
         tel: '+52 (55)5663-3220',
+        vtel: 'Contacto: +52 (55)5663-3220',
         Movil: '',
         mail: 'info@efhcorporativo.com',
         web: 'www.efhcorporativo.com'
@@ -259,6 +242,7 @@ var ventas = {
         Country: '',
         Direccion:'',
         tel: '',
+        vtel: 'Contacto: ',
         Movil: '',
         mail: 'info@efhargentina.com',
         web: 'www.efhargentina.com'
@@ -267,6 +251,7 @@ var ventas = {
         Country: 'Raúl Ramallo',
         Direccion:'Av. Sanchez Lima, Edificio Tango, piso 10, Oficina 1001. La Paz, Bolivia',
         tel: '+591 77556161',
+        vtel: 'Contacto: +591 77556161',
         Movil: '',
         mail: 'info@efhbolivia.com',
         web: 'www.efhbolivia.com'
@@ -275,6 +260,7 @@ var ventas = {
         Country: 'David Segovia ',
         Direccion:'Av. Nueva Providencia 1881, Oficina 520 Comuna Providencia Santiago de Chile.',
         tel: '+562 2753 3604 /+569 4245 1987',
+        vtel: 'Contacto: +562 2753 3604',
         Movil: '',
         mail: 'info@efhchile.com',
         web: 'www.efhchile.com'
@@ -283,6 +269,7 @@ var ventas = {
         Country: 'Alejandro García',
         Direccion: 'Calle 20 No.82-52 Oficina 402, Centro Empresarial Hayuelos, Bogotá D.C.',
         tel: '+57 1 7041489, +57 1 7041487.',
+        vtel: 'Contacto: +57 1 7041489',
         Movil: '+573 16473-8981',
         mail: 'info@efhcolombia.com',
         web: 'www.efhcolombia.com'
@@ -291,6 +278,7 @@ var ventas = {
         Country: 'Rebeca Bustamante',
         Direccion: 'Centro cultural norteamericano 200 mts norte, 50 mts este oficentro Ofident, los Yoses, San Jose CR.',
         tel: '+506 4030-7764',
+        vtel: 'Contacto: +506 4030-7764',
         Movil: '+506 8751-7643',
         mail: 'info@efhcostarica.com',
         web: 'www.efhcostarica.com'
@@ -299,6 +287,7 @@ var ventas = {
         Country: 'Xavier Verdesoto V.',
         Direccion: 'Italia N31-54 y Vancouver, Quito, Ecuador.',
         tel: '+5932 6007500, 6007502, 6007503.',
+        vtel: 'Contacto: +5932 6007500',
         Movil: '+593 09951-5200',
         mail: 'info@efhecuador.com',
         web: 'www.efhecuador.com'
@@ -306,15 +295,17 @@ var ventas = {
     Salvador: {
         Country: 'Lic. Angela G. Escobar',
         Direccion: '13 Calle Poniente No. 4344, Col. Escalón, San Salvador, El Salvador, C.A.',
-        Movil: '',
         tel: '+503 2264 5961/62/63',
+        vtel: 'Contacto: +503 2264 5961',
+        Movil: '',
         mail: 'info@efhelsalvador.com',
         web: 'www.efhelsalvador.com'
     },
     Guatemala: {
         Country: 'Diana Altamirano',
         Direccion: 'Guatemala, Centroamérica',
-        tel: '+502 5528 22 11.',
+        tel: '+502 5528 22 11',
+        vtel: 'Contacto: +502 5528 22 11',
         Movil: '+502 5179-8516',
         mail: 'info@efhguatemala.com',
         web: 'www.efhguatemala.com'
@@ -323,6 +314,7 @@ var ventas = {
         Country: 'Ing. Gustavo Molina',
         Direccion: '2a. calle No. 4101 Col. Florencia Sur Tegucigalpa, Honduras, CA',
         tel: '+504 2232 0013, +504 9963 4879',
+        vtel: 'Contacto: +504 2232 0013',
         Movil: '',
         mail: 'info@efhhonduras.com',
         web: 'www.efhhonduras.com'
@@ -331,13 +323,16 @@ var ventas = {
         Country: 'Sandra Lira',
         Direccion: 'Managua, Canal 2 TV, 2 Cuadras Norte 20 varas Oeste, Bolonia',
         tel: '+505 2254 5153, +505 2266 6776',
+        vtel: 'Contacto: +505 2254 5153',
+        Movil:'',
         mail: 'info@efhnicaragua.com',
         web: 'www.efhnicaragua.com'
     },
     Panama: {
         Country: 'Jorge Isaac Pitty M.',
         Direccion: 'Calle 8 La Rivera Don Bosco, Local 57-E Ciudad de Panamá, Panamá. República Dominicana.',
-        tel: '+00 507 293 6903.',
+        tel: '+00 507 293 6903',
+        vtel: 'Contacto: +00 507 293 6903',
         Movil:'+00 507 6680 711',
         mail: 'info@efhpanama.com',
         web: 'www.efhpanama.com'
@@ -346,6 +341,7 @@ var ventas = {
         Country: 'Enrique A. Queija S.',
         Direccion: 'Calle Monte Rosa 255, Piso 4, Urbanización Chacarilla, Santiago de Surco. Lima.',
         tel: '+511 625 9747',
+        vtel: 'Contacto: +511 625 9747',
         Movil: '+519 4848-3828',
         mail: 'info@efhperu.com',
         web: 'www.efhperu.com'
@@ -354,12 +350,13 @@ var ventas = {
         Country: 'Luisa Maleno',
         Direccion: 'Calle Plaza de la Cultura No. 26, El Millón, Sto. Domingo, República Dominicana.',
         tel: '+809-482-2657',
+        vtel: 'Contacto: +809-482-2657',
         Movil: '',
         mail: 'lmaleno@efhcaribe.com',
         web: 'www.efhcaribe.com'
     },
 };
-selec = ''; /*Variable global para efecto mouseover*/
+var selec = ''; /*Variable global para efecto mouseover*/
 $('.ventas .flag-wrapper').click(function () {
     var pais = $('div',this).attr("id");
     var mypais = $('div', this).attr("title");
@@ -398,18 +395,20 @@ $('.ventas .flag-wrapper').mouseover(function () {
         }
     });
 
-
+/*Envío de correo electronico*/
 $('#btnEnviarCorreo').click(function () {
     var Nombre = $('#txtNombre').val();
     var Email = $('#txtEmail').val();
     var Asunto = $('#txtSubject').val();
     var mydom = String(window.location.host);
     var Mensaje = $('#txtMensaje').val();
+    if (pais == "Mexico") {
+        pais = "México";
+    }
     var obj;
     if ((Nombre == '') || (Email == '') || (Asunto == '') || (Mensaje == '')) {
         $('#respuesta').show();
         $('#respuesta').html("<p class='msjmail'>LLene correctamente el formulario</p>")
-        
     }
     else {
         $.ajax({
@@ -427,13 +426,9 @@ $('#btnEnviarCorreo').click(function () {
                 $('#txtEmail').val('');
                 $('#txtSubject').val('');
                 $('#txtMensaje').val('');
-                
             }
         });
-
     }
     $('#respuesta').hide(7000)
-  
     return false;
-    
 });
